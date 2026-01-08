@@ -1,0 +1,87 @@
+{
+  "nav": {
+    "about": "About Us",
+    "aboutSub": {
+      "concept": "Business Philosophy",
+      "history": "Company History",
+      "human": "Human Resources",
+      "invest": "Investor Relations"
+    },
+    "products": "Products & Services",
+    "productsSub": {
+      "cutting": "Cutting Services",
+      "tape": "Shading-Reflective Tape",
+      "material": "Functional Materials",
+      "semiconductor": "Semiconductor Materials",
+      "film": "Protective Film",
+      "foam": "Foam Tape",
+      "optical": "Optical Adhesive"
+    },
+    "quality": "Quality Policy",
+    "core": "Core Technology",
+    "sustainable": "Sustainability",
+    "sustainableSub": {
+      "responsibility": "Corporate Social Responsibility",
+      "biodiversity": "Biodiversity Statement",
+      "security": "Information Security Policy",
+      "integrity": "Business Integrity Policy",
+      "labor": "Labor Protection"
+    },
+    "contact": "Contact"
+  },
+    "hint": {
+    "title": "For your convenience, the menu has been moved to the bottom right!",
+    "subtitle": "Tap anywhere to close"
+  },
+  "hero": {
+    "title": "Your Solutions, AMC Materials",
+    "slogan": "Your Solutions, AMC Materials",
+    "cta": "Learn More"
+  },
+  "main": {
+    "block1": {
+      "title": "\"Quality First, Win-Win Together\"",
+      "description": "AMC actively pursues quality, obtains various professional certifications, and cooperates with customer requirements to actively introduce other professional certifications, in order to meet customer needs in product quality, production efficiency and customer service, and create new win-win opportunities.",
+      "triangle": {
+        "quality": "Quality",
+        "efficiency": "Efficiency",
+        "service": "Service"
+      }
+    },
+    "block2": {
+      "optical": {
+        "title": "Optical Material Cutting",
+        "desc": "Provide cutting services for various sizes of optical films and OCA"
+      },
+      "material": {
+        "title": "Functional Materials",
+        "desc": "Optical/structural adhesives, shading-reflective tapes, removable adhesives, protective films, foam tapes"
+      },
+      "cutting": {
+        "title": "Cutting Services",
+        "desc": "Provide customized cutting services for optical and industrial films, slitting, rewinding, lamination, die-cutting"
+      }
+    },
+    "block3": {
+      "intro": "AMC is based on the improvement and development of core technical capabilities, market demand-oriented, combined with waste reduction, environmental protection, customization, cost advantages and other strategies, to develop related process technologies and key materials, improve and enhance process technical capabilities, and achieve diversified application development goals.",
+      "tech1": {
+        "title": "Optical Functional Materials",
+        "desc": "UV adhesive, optical adhesive, optical structural resin, self-assembly materials"
+      },
+      "tech2": {
+        "title": "Adhesive Application Materials",
+        "desc": "Ultra-high adhesion, micro adhesion, high-low adhesion combination, special adhesion"
+      },
+      "tech3": {
+        "title": "Cutting Processing Technology",
+        "desc": "CNC, wafer cutting, FT special cutting, precision die cutting, lamination, slitting, roll cutting, multi-layer film composite processing"
+      }
+    }
+  },
+  "footer": {
+    "policy": "Corporate Policy",
+    "copyright": "© 2026 Alliance Material Co., Ltd. All Rights Reserved.",
+    "language": "Language"
+  }
+}
+

@@ -6,9 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="山太士（AMC）專注於半導體材料、光學膠與精密裁切加工，提供全球一線客戶頂級材料解決方案。"
+      content="山太士(AMC)專注於半導體材料、光學膠與精密裁切加工，提供全球一線客戶頂級材料解決方案。"
     />
     <meta name="keywords" content="山太士, AMC, 半導體材料, 光學膠, 裁切加工" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; 
+                   script-src 'self' 'unsafe-inline' https://fonts.googleapis.com; 
+                   style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; 
+                   font-src 'self' https://fonts.gstatic.com; 
+                   img-src 'self' data:;"
+    />
+    <!-- ✅ 改用這個 -->
+<meta http-equiv="Content-Security-Policy" content="frame-ancestors 'none';">
+
+    <!-- 防止 MIME 類型嗅探 -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <!-- 啟用 XSS 過濾器 -->
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+    <!-- 推薦 HTTPS -->
+    <meta
+      http-equiv="Strict-Transport-Security"
+      content="max-age=31536000; includeSubDomains"
+    />
 
     <title>AMC 山太士 - 先進光學與半導體材料</title>
 
@@ -21,6 +41,7 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Montserrat:wght@700;800&display=swap"
       rel="stylesheet"
+      crossorigin="anonymous"
     />
   </head>
 
@@ -33,7 +54,7 @@
         <!-- Logo 區域 -->
         <div class="logo">
           <a href="index.html" aria-label="回到首頁">
-            <img src="img/all/logo.png" alt="AMC 山太士 Logo" />
+            <img src="./img/all/logo.png" alt="AMC 山太士 Logo" />
           </a>
         </div>
 
@@ -46,15 +67,17 @@
           aria-modal="true"
         >
           <div class="hintText">
-            <p id="hint-title">為了方便您操作，選單已移至右下方！</p>
-            <p class="hint-small">任意點擊關閉提示</p>
+            <p id="hint-title" data-i18n="hint.title">
+              為了方便您操作，選單已移至右下方！
+            </p>
+            <p class="hint-small" data-i18n="hint.subtitle">任意點擊關閉提示</p>
             <div class="arrow-indicator" aria-hidden="true"></div>
           </div>
         </div>
 
         <!-- Slogan (桌機版顯示) -->
         <div class="sloganText" aria-hidden="true">
-          <h4>Your Solutions, AMC Materials</h4>
+          <h4 data-i18n="hero.slogan">Your Solutions, AMC Materials</h4>
         </div>
 
         <!-- 導航選單容器 -->
@@ -79,21 +102,42 @@
                 role="menuitem"
                 aria-haspopup="true"
                 tabindex="0"
+                data-i18n="nav.about"
               >
                 關於我們
               </span>
               <ul class="dropdown-menu" role="menu" aria-label="關於我們子選單">
                 <li class="dropdown-item" role="none">
-                  <a href="concept.html" role="menuitem">經營理念</a>
+                  <a
+                    href="concept.html"
+                    role="menuitem"
+                    data-i18n="nav.aboutSub.concept"
+                    >經營理念</a
+                  >
                 </li>
                 <li class="dropdown-item" role="none">
-                  <a href="about.html" role="menuitem">公司沿革</a>
+                  <a
+                    href="about.html"
+                    role="menuitem"
+                    data-i18n="nav.aboutSub.history"
+                    >公司沿革</a
+                  >
                 </li>
                 <li class="dropdown-item" role="none">
-                  <a href="human.html" role="menuitem">人力資源</a>
+                  <a
+                    href="human.html"
+                    role="menuitem"
+                    data-i18n="nav.aboutSub.human"
+                    >人力資源</a
+                  >
                 </li>
                 <li class="dropdown-item" role="none">
-                  <a href="invest.html" role="menuitem">投資人專區</a>
+                  <a
+                    href="invest.html"
+                    role="menuitem"
+                    data-i18n="nav.aboutSub.invest"
+                    >投資人專區</a
+                  >
                 </li>
               </ul>
             </li>
@@ -105,44 +149,90 @@
                 role="menuitem"
                 aria-haspopup="true"
                 tabindex="0"
+                data-i18n="nav.products"
               >
                 產品服務
               </span>
               <ul class="dropdown-menu" role="menu" aria-label="產品服務子選單">
                 <li class="dropdown-item" role="none">
-                  <a href="product.html" role="menuitem">裁切加工</a>
+                  <a
+                    href="product.html"
+                    role="menuitem"
+                    data-i18n="nav.productsSub.cutting"
+                    >裁切加工</a
+                  >
                 </li>
                 <li class="dropdown-item" role="none">
-                  <a href="product2.html" role="menuitem">遮光-反射膠帶</a>
+                  <a
+                    href="product2.html"
+                    role="menuitem"
+                    data-i18n="nav.productsSub.tape"
+                    >遮光-反射膠帶</a
+                  >
                 </li>
                 <li class="dropdown-item" role="none">
-                  <a href="product3.html" role="menuitem">機能材料</a>
+                  <a
+                    href="product3.html"
+                    role="menuitem"
+                    data-i18n="nav.productsSub.material"
+                    >機能材料</a
+                  >
                 </li>
                 <li class="dropdown-item" role="none">
-                  <a href="product4.html" role="menuitem">半導體材料</a>
+                  <a
+                    href="product4.html"
+                    role="menuitem"
+                    data-i18n="nav.productsSub.semiconductor"
+                    >半導體材料</a
+                  >
                 </li>
                 <li class="dropdown-item" role="none">
-                  <a href="product5.html" role="menuitem">保護膜</a>
+                  <a
+                    href="product5.html"
+                    role="menuitem"
+                    data-i18n="nav.productsSub.film"
+                    >保護膜</a
+                  >
                 </li>
                 <li class="dropdown-item" role="none">
-                  <a href="product6.html" role="menuitem">泡棉膠帶</a>
+                  <a
+                    href="product6.html"
+                    role="menuitem"
+                    data-i18n="nav.productsSub.foam"
+                    >泡棉膠帶</a
+                  >
                 </li>
                 <li class="dropdown-item" role="none">
-                  <a href="product7.html" role="menuitem">光學膠</a>
+                  <a
+                    href="product7.html"
+                    role="menuitem"
+                    data-i18n="nav.productsSub.optical"
+                    >光學膠</a
+                  >
                 </li>
               </ul>
             </li>
 
             <!-- 3. 品質政策 (無下拉) -->
             <li class="nav-item" role="none">
-              <a href="quality.html" class="nav-link" role="menuitem"
+              <a
+                href="quality.html"
+                class="nav-link"
+                role="menuitem"
+                data-i18n="nav.quality"
                 >品質政策</a
               >
             </li>
 
             <!-- 4. 核心技術 (無下拉) -->
             <li class="nav-item" role="none">
-              <a href="core.html" class="nav-link" role="menuitem">核心技術</a>
+              <a
+                href="core.html"
+                class="nav-link"
+                role="menuitem"
+                data-i18n="nav.core"
+                >核心技術</a
+              >
             </li>
 
             <!-- 5. 永續經營 -->
@@ -152,31 +242,61 @@
                 role="menuitem"
                 aria-haspopup="true"
                 tabindex="0"
+                data-i18n="nav.sustainable"
               >
                 永續經營
               </span>
               <ul class="dropdown-menu" role="menu" aria-label="永續經營子選單">
                 <li class="dropdown-item" role="none">
-                  <a href="responsibility.html" role="menuitem">企業社會責任</a>
+                  <a
+                    href="responsibility.html"
+                    role="menuitem"
+                    data-i18n="nav.sustainableSub.responsibility"
+                    >企業社會責任</a
+                  >
                 </li>
                 <li class="dropdown-item" role="none">
-                  <a href="Sustainable.html" role="menuitem">生物多樣性宣言</a>
+                  <a
+                    href="Sustainable.html"
+                    role="menuitem"
+                    data-i18n="nav.sustainableSub.biodiversity"
+                    >生物多樣性宣言</a
+                  >
                 </li>
                 <li class="dropdown-item" role="none">
-                  <a href="Sustainable1.html" role="menuitem">資通訊安全政策</a>
+                  <a
+                    href="Sustainable1.html"
+                    role="menuitem"
+                    data-i18n="nav.sustainableSub.security"
+                    >資通訊安全政策</a
+                  >
                 </li>
                 <li class="dropdown-item" role="none">
-                  <a href="Sustainable2.html" role="menuitem">商業誠信政策</a>
+                  <a
+                    href="Sustainable2.html"
+                    role="menuitem"
+                    data-i18n="nav.sustainableSub.integrity"
+                    >商業誠信政策</a
+                  >
                 </li>
                 <li class="dropdown-item" role="none">
-                  <a href="Sustainable3.html" role="menuitem">勞動保障</a>
+                  <a
+                    href="Sustainable3.html"
+                    role="menuitem"
+                    data-i18n="nav.sustainableSub.labor"
+                    >勞動保障</a
+                  >
                 </li>
               </ul>
             </li>
 
             <!-- 6. 聯絡窗口 (無下拉) -->
             <li class="nav-item" role="none">
-              <a href="contact.html" class="nav-link" role="menuitem"
+              <a
+                href="contact.html"
+                class="nav-link"
+                role="menuitem"
+                data-i18n="nav.contact"
                 >聯絡窗口</a
               >
             </li>
@@ -198,19 +318,54 @@
               </button>
               <ul class="dropdown-menu" role="menu" aria-label="語言選擇">
                 <li class="dropdown-item" role="none">
-                  <a href="#" role="menuitem" lang="zh-TW">繁體中文</a>
+                  <a
+                    href="#"
+                    role="menuitem"
+                    class="lang-switch"
+                    data-lang="zh-tw"
+                    lang="zh-TW"
+                    >繁體中文</a
+                  >
                 </li>
                 <li class="dropdown-item" role="none">
-                  <a href="#" role="menuitem" lang="zh-CN">简体中文</a>
+                  <a
+                    href="#"
+                    role="menuitem"
+                    class="lang-switch"
+                    data-lang="zh-cn"
+                    lang="zh-CN"
+                    >简体中文</a
+                  >
                 </li>
                 <li class="dropdown-item" role="none">
-                  <a href="#" role="menuitem" lang="en">English</a>
+                  <a
+                    href="#"
+                    role="menuitem"
+                    class="lang-switch"
+                    data-lang="en"
+                    lang="en"
+                    >English</a
+                  >
                 </li>
                 <li class="dropdown-item" role="none">
-                  <a href="#" role="menuitem" lang="ja">日本語</a>
+                  <a
+                    href="#"
+                    role="menuitem"
+                    class="lang-switch"
+                    data-lang="ja"
+                    lang="ja"
+                    >日本語</a
+                  >
                 </li>
                 <li class="dropdown-item" role="none">
-                  <a href="#" role="menuitem" lang="ko">한국어</a>
+                  <a
+                    href="#"
+                    role="menuitem"
+                    class="lang-switch"
+                    data-lang="ko"
+                    lang="ko"
+                    >한국어</a
+                  >
                 </li>
               </ul>
             </li>
@@ -226,8 +381,10 @@
       <div class="mountain-bg"></div>
 
       <div class="center-content">
-        <h1 class="main-title">Your Solutions, AMC Materials</h1>
-        <button class="cta-button">了解更多</button>
+        <h1 class="main-title" data-i18n="hero.title">
+          Your Solutions, AMC Materials
+        </h1>
+        <button class="cta-button" data-i18n="hero.cta">了解更多</button>
       </div>
 
       <div class="calligraphy-section" id="calligraphySection">
@@ -257,11 +414,11 @@
         <div class="company-info-bottom">
           <p class="company-name-en">Alliance Material Co., Ltd.</p>
           <div class="tagline">
-            <p class="tagline-word" data-word="efficiency">EFFICIENCY</p>
+            <p class="tagline-word">EFFICIENCY</p>
             <p class="dot">,</p>
-            <p class="tagline-word" data-word="quality">QUALITY</p>
+            <p class="tagline-word">QUALITY</p>
             <p class="dot">,</p>
-            <p class="tagline-word" data-word="service">SERVICE</p>
+            <p class="tagline-word">SERVICE</p>
           </div>
         </div>
       </div>
@@ -276,16 +433,18 @@
           <div class="triangle-container" id="triangleContainer">
             <div class="AMCtriangle"></div>
             <div class="triangle-text">
-              <p data-word="quality">Quality<br />品質</p>
-              <p data-word="efficiency">Efficiency<br />效率</p>
-              <p data-word="service">Service<br />服務</p>
+              <p data-i18n="main.block1.triangle.quality">Quality<br />品質</p>
+              <p data-i18n="main.block1.triangle.efficiency">
+                Efficiency<br />效率
+              </p>
+              <p data-i18n="main.block1.triangle.service">Service<br />服務</p>
             </div>
           </div>
         </div>
         <div class="main-introduce">
           <!-- 介紹內容區 -->
-          <h1>「堅持品質，共創雙贏」</h1>
-          <h3>
+          <h1 data-i18n="main.block1.title">「堅持品質，共創雙贏」</h1>
+          <h3 data-i18n="main.block1.description">
             山太士積極要求品質，通過各項專業認證，並配合客戶需求，積極導入其他專業認證，期能在產品品質、生產效率及客戶服務等方面符合客戶需求，讓合作順利，共同創造雙贏之新契機。
           </h3>
         </div>
@@ -293,16 +452,20 @@
       <div class="shadow"></div>
       <div class="main-block2">
         <a href="" class="optical-cutting-service block2-same">
-          <h2>光學材料裁切成品</h2>
-          <p>提供各種尺寸及各類光學膜與OCA裁切加工服務</p>
+          <h2 data-i18n="main.block2.optical.title">光學材料裁切成品</h2>
+          <p data-i18n="main.block2.optical.desc">
+            提供各種尺寸及各類光學膜與OCA裁切加工服務
+          </p>
         </a>
         <a href="" class="functional-material block2-same">
-          <h2>機能性材料</h2>
-          <p>光學/結構成型膠、遮光-反射膠帶、可撥膠、保護膜、泡棉膠帶</p>
+          <h2 data-i18n="main.block2.material.title">機能性材料</h2>
+          <p data-i18n="main.block2.material.desc">
+            光學/結構成型膠、遮光-反射膠帶、可撥膠、保護膜、泡棉膠帶
+          </p>
         </a>
         <a href="" class="cutting-service block2-same">
-          <h2>裁切加工</h2>
-          <p>
+          <h2 data-i18n="main.block2.cutting.title">裁切加工</h2>
+          <p data-i18n="main.block2.cutting.desc">
             提供各式光學及工業用途膜材之客製化裁切加工服務、切捲加工分條、覆捲加工、捲材貼合加工、膜切加工
           </p>
         </a>
@@ -311,40 +474,44 @@
       <div class="main-block3">
         <div class="company-introduce-block">
           <img
-            src="/Web/img/index/p4.jpg"
+            src="./img/index/p4.jpg"
             alt="company-photo"
             class="company-introduce-img"
           />
-          <p>
+          <p data-i18n="main.block3.intro">
             山太士奠基於核心技術能力之提升與發展，以市場需求為導向，配合減廢、環境保護、客製化、優勢成本等策略，開發出相關製程技術與關鍵材料，改善並增進製程技術能力，達成多元化應用發展之目的。簡而言之，以不斷的求新求變和成長，邁向企業永續經營之目標。
           </p>
         </div>
         <div class="core-technologies">
           <div class="optical-functional-materials core-technologies-same">
             <div class="core-technologies-imgbox">
-              <img src="/Web/img/core/icon1.png" alt="" />
+              <img src="./img/core/icon1.png" alt="" />
             </div>
             <div class="core-technologies-txt">
-              <h2>光學機能材料</h2>
-              <p>光固化膠、光學膠、光學結構用樹脂、自組裝材料</p>
+              <h2 data-i18n="main.block3.tech1.title">光學機能材料</h2>
+              <p data-i18n="main.block3.tech1.desc">
+                光固化膠、光學膠、光學結構用樹脂、自組裝材料
+              </p>
             </div>
           </div>
           <div class="adhesive-application core-technologies-same">
             <div class="core-technologies-imgbox">
-              <img src="/Web/img/core/icon2.png" alt="" />
+              <img src="./img/core/icon2.png" alt="" />
             </div>
             <div class="core-technologies-txt">
-              <h2>黏著應用材料</h2>
-              <p>超高黏力、微黏力、高低黏力搭配、特殊黏著</p>
+              <h2 data-i18n="main.block3.tech2.title">黏著應用材料</h2>
+              <p data-i18n="main.block3.tech2.desc">
+                超高黏力、微黏力、高低黏力搭配、特殊黏著
+              </p>
             </div>
           </div>
           <div class="precision-cutting core-technologies-same">
             <div class="core-technologies-imgbox">
-              <img src="/Web/img/core/icon3.png" alt="" />
+              <img src="./img/core/icon3.png" alt="" />
             </div>
             <div class="core-technologies-txt">
-              <h2>裁切加工技術</h2>
-              <p>
+              <h2 data-i18n="main.block3.tech3.title">裁切加工技術</h2>
+              <p data-i18n="main.block3.tech3.desc">
                 CNC、晶圓切割、FT異型切割、精密糢切、貼合、分條、切捲、多層膜材複合加工
               </p>
             </div>
@@ -358,75 +525,184 @@
         <nav class="footer-nav" aria-label="頁尾導航">
           <!-- 1. 關於我們 -->
           <div class="footer-group">
-            <h4 class="footer-title">關於我們</h4>
+            <h4 class="footer-title" data-i18n="nav.about">關於我們</h4>
             <ul class="footer-list">
-              <li><a href="concept.html" class="footer-link">經營理念</a></li>
-              <li><a href="about.html" class="footer-link">公司沿革</a></li>
-              <li><a href="human.html" class="footer-link">人力資源</a></li>
-              <li><a href="invest.html" class="footer-link">投資人專區</a></li>
+              <li>
+                <a
+                  href="concept.html"
+                  class="footer-link"
+                  data-i18n="nav.aboutSub.concept"
+                  >經營理念</a
+                >
+              </li>
+              <li>
+                <a
+                  href="about.html"
+                  class="footer-link"
+                  data-i18n="nav.aboutSub.history"
+                  >公司沿革</a
+                >
+              </li>
+              <li>
+                <a
+                  href="human.html"
+                  class="footer-link"
+                  data-i18n="nav.aboutSub.human"
+                  >人力資源</a
+                >
+              </li>
+              <li>
+                <a
+                  href="invest.html"
+                  class="footer-link"
+                  data-i18n="nav.aboutSub.invest"
+                  >投資人專區</a
+                >
+              </li>
             </ul>
           </div>
 
           <!-- 2. 產品服務 -->
           <div class="footer-group">
-            <h4 class="footer-title">產品服務</h4>
+            <h4 class="footer-title" data-i18n="nav.products">產品服務</h4>
             <ul class="footer-list">
-              <li><a href="product.html" class="footer-link">裁切加工</a></li>
               <li>
-                <a href="product2.html" class="footer-link">遮光-反射膠帶</a>
+                <a
+                  href="product.html"
+                  class="footer-link"
+                  data-i18n="nav.productsSub.cutting"
+                  >裁切加工</a
+                >
               </li>
-              <li><a href="product3.html" class="footer-link">機能材料</a></li>
               <li>
-                <a href="product4.html" class="footer-link">半導體材料</a>
+                <a
+                  href="product2.html"
+                  class="footer-link"
+                  data-i18n="nav.productsSub.tape"
+                  >遮光-反射膠帶</a
+                >
               </li>
-              <li><a href="product5.html" class="footer-link">保護膜</a></li>
-              <li><a href="product6.html" class="footer-link">泡棉膠帶</a></li>
-              <li><a href="product7.html" class="footer-link">光學膠</a></li>
-              <!-- 移除「查看更多產品...」這行 -->
+              <li>
+                <a
+                  href="product3.html"
+                  class="footer-link"
+                  data-i18n="nav.productsSub.material"
+                  >機能材料</a
+                >
+              </li>
+              <li>
+                <a
+                  href="product4.html"
+                  class="footer-link"
+                  data-i18n="nav.productsSub.semiconductor"
+                  >半導體材料</a
+                >
+              </li>
+              <li>
+                <a
+                  href="product5.html"
+                  class="footer-link"
+                  data-i18n="nav.productsSub.film"
+                  >保護膜</a
+                >
+              </li>
+              <li>
+                <a
+                  href="product6.html"
+                  class="footer-link"
+                  data-i18n="nav.productsSub.foam"
+                  >泡棉膠帶</a
+                >
+              </li>
+              <li>
+                <a
+                  href="product7.html"
+                  class="footer-link"
+                  data-i18n="nav.productsSub.optical"
+                  >光學膠</a
+                >
+              </li>
             </ul>
           </div>
 
           <!-- 3. 企業政策 -->
           <div class="footer-group">
-            <h4 class="footer-title">企業政策</h4>
+            <h4 class="footer-title" data-i18n="footer.policy">企業政策</h4>
             <ul class="footer-list">
-              <li><a href="quality.html" class="footer-link">品質政策</a></li>
-              <li><a href="core.html" class="footer-link">核心技術</a></li>
-              <li><a href="contact.html" class="footer-link">聯絡窗口</a></li>
+              <li>
+                <a
+                  href="quality.html"
+                  class="footer-link"
+                  data-i18n="nav.quality"
+                  >品質政策</a
+                >
+              </li>
+              <li>
+                <a href="core.html" class="footer-link" data-i18n="nav.core"
+                  >核心技術</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  class="footer-link"
+                  data-i18n="nav.contact"
+                  >聯絡窗口</a
+                >
+              </li>
             </ul>
           </div>
 
           <!-- 4. 永續經營 -->
           <div class="footer-group">
-            <h4 class="footer-title">永續經營</h4>
+            <h4 class="footer-title" data-i18n="nav.sustainable">永續經營</h4>
             <ul class="footer-list">
               <li>
-                <a href="responsibility.html" class="footer-link"
+                <a
+                  href="responsibility.html"
+                  class="footer-link"
+                  data-i18n="nav.sustainableSub.responsibility"
                   >企業社會責任</a
                 >
               </li>
               <li>
-                <a href="Sustainable.html" class="footer-link"
+                <a
+                  href="Sustainable.html"
+                  class="footer-link"
+                  data-i18n="nav.sustainableSub.biodiversity"
                   >生物多樣性宣言</a
                 >
               </li>
               <li>
-                <a href="Sustainable1.html" class="footer-link"
+                <a
+                  href="Sustainable1.html"
+                  class="footer-link"
+                  data-i18n="nav.sustainableSub.security"
                   >資通訊安全政策</a
                 >
               </li>
               <li>
-                <a href="Sustainable2.html" class="footer-link">商業誠信政策</a>
+                <a
+                  href="Sustainable2.html"
+                  class="footer-link"
+                  data-i18n="nav.sustainableSub.integrity"
+                  >商業誠信政策</a
+                >
               </li>
               <li>
-                <a href="Sustainable3.html" class="footer-link">勞動保障</a>
+                <a
+                  href="Sustainable3.html"
+                  class="footer-link"
+                  data-i18n="nav.sustainableSub.labor"
+                  >勞動保障</a
+                >
               </li>
             </ul>
           </div>
 
           <!-- 5. 語言切換 (獨立一區) -->
           <div class="footer-group footer-lang">
-            <h4 class="footer-title">Language</h4>
+            <h4 class="footer-title" data-i18n="footer.language">Language</h4>
             <div class="custom-select">
               <div class="select-selected">繁體中文</div>
               <!-- 桌機版下拉選單 -->
@@ -442,300 +718,299 @@
 
           <div class="footer-logo">
             <a href="index.html" aria-label="回到首頁">
-              <img src="/Web/img/all/logo.png" alt="山太士 AMC Logo" />
+              <img src="./img/all/logo.png" alt="山太士 AMC Logo" />
             </a>
           </div>
         </nav>
 
         <!-- 頁尾版權 -->
         <div class="footer-bottom">
-          <p class="copyright">
+          <p class="copyright" data-i18n="footer.copyright">
             &copy; 2026 山太士股份有限公司 All Rights Reserved.
           </p>
         </div>
       </div>
     </footer>
+
     <!-- 手機版全螢幕 Modal -->
     <div class="lang-modal">
       <div class="lang-modal-overlay"></div>
       <div class="lang-modal-content">
         <div class="lang-modal-header">
-          <h3>選擇語言</h3>
+          <h3>Chose Language</h3>
           <button class="lang-modal-close" aria-label="關閉">&times;</button>
         </div>
         <div class="lang-modal-body">
-          <button class="lang-option" data-value="zh-tw">
+          <button class="lang-option" data-lang="zh-tw">
             <span class="lang-name">繁體中文</span>
             <span class="lang-check">✓</span>
           </button>
-          <button class="lang-option" data-value="zh-cn">
+          <button class="lang-option" data-lang="zh-cn">
             <span class="lang-name">简体中文</span>
             <span class="lang-check"></span>
           </button>
-          <button class="lang-option" data-value="en">
+          <button class="lang-option" data-lang="en">
             <span class="lang-name">English</span>
             <span class="lang-check"></span>
           </button>
-          <button class="lang-option" data-value="ja">
+          <button class="lang-option" data-lang="ja">
             <span class="lang-name">日本語</span>
             <span class="lang-check"></span>
           </button>
-          <button class="lang-option" data-value="ko">
+          <button class="lang-option" data-lang="ko">
             <span class="lang-name">한국어</span>
             <span class="lang-check"></span>
           </button>
         </div>
       </div>
     </div>
+
     <!-- ==========================================
-         JAVASCRIPT - 僅保留導航邏輯
+         多語系系統
+         ========================================== -->
+    <script src="./js/i18n.js"></script>
+
+    <!-- ==========================================
+         JAVASCRIPT - 導航邏輯
          ========================================== -->
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-  
-  // ==========================================
-  // 1. 語言選擇器（桌機版下拉 + 手機版 Modal）
-  // ==========================================
-  const customSelect = document.querySelector('.custom-select');
-  const langModal = document.querySelector('.lang-modal');
-  
-  if (customSelect) {
-    const selectSelected = customSelect.querySelector('.select-selected');
-    const selectItems = customSelect.querySelector('.select-items');
-    const desktopOptions = selectItems ? selectItems.querySelectorAll('div') : [];
-    
-    const modalOverlay = langModal ? langModal.querySelector('.lang-modal-overlay') : null;
-    const modalClose = langModal ? langModal.querySelector('.lang-modal-close') : null;
-    const mobileOptions = langModal ? langModal.querySelectorAll('.lang-option') : [];
+      document.addEventListener("DOMContentLoaded", function () {
+        // ==========================================
+        // 1. 語言選擇器（桌機版下拉 + 手機版 Modal）
+        // ==========================================
+        const customSelect = document.querySelector(".custom-select");
+        const langModal = document.querySelector(".lang-modal");
 
-    // 偵測是否為手機版
-    function isMobile() {
-      return window.innerWidth <= 820;
-    }
+        if (customSelect) {
+          const selectSelected = customSelect.querySelector(".select-selected");
+          const selectItems = customSelect.querySelector(".select-items");
+          const desktopOptions = selectItems
+            ? selectItems.querySelectorAll("div")
+            : [];
 
-    // 關閉 Modal
-    function closeModal() {
-      if (langModal) {
-        langModal.classList.remove('active');
-        document.body.style.overflow = '';
-      }
-    }
+          const modalOverlay = langModal
+            ? langModal.querySelector(".lang-modal-overlay")
+            : null;
+          const modalClose = langModal
+            ? langModal.querySelector(".lang-modal-close")
+            : null;
+          const mobileOptions = langModal
+            ? langModal.querySelectorAll(".lang-option")
+            : [];
 
-    // 點擊語言選擇器
-    if (selectSelected) {
-      selectSelected.addEventListener('click', function(e) {
-        e.stopPropagation();
-        if (isMobile() && langModal) {
-          // 手機版：開啟全螢幕 Modal
-          langModal.classList.add('active');
-          document.body.style.overflow = 'hidden';
-        } else if (selectItems) {
-          // 桌機版：下拉選單
-          selectItems.classList.toggle('select-hide');
-          this.classList.toggle('select-arrow-active');
+          // 偵測是否為手機版
+          function isMobile() {
+            return window.innerWidth <= 820;
+          }
+
+          // 關閉 Modal
+          function closeModal() {
+            if (langModal) {
+              langModal.classList.remove("active");
+              document.body.style.overflow = "";
+            }
+          }
+
+          // 點擊語言選擇器
+          if (selectSelected) {
+            selectSelected.addEventListener("click", function (e) {
+              e.stopPropagation();
+              if (isMobile() && langModal) {
+                langModal.classList.add("active");
+                document.body.style.overflow = "hidden";
+              } else if (selectItems) {
+                selectItems.classList.toggle("select-hide");
+                this.classList.toggle("select-arrow-active");
+              }
+            });
+          }
+
+          // 桌機版選項點擊
+          desktopOptions.forEach((option) => {
+            option.addEventListener("click", function (e) {
+              e.stopPropagation();
+              const value = this.getAttribute("data-value");
+              if (window.i18n) {
+                window.i18n.changeLanguage(value);
+              }
+              if (selectItems) {
+                selectItems.classList.add("select-hide");
+              }
+              if (selectSelected) {
+                selectSelected.classList.remove("select-arrow-active");
+              }
+            });
+          });
+
+          // 手機版選項點擊
+          mobileOptions.forEach((option) => {
+            option.addEventListener("click", function (e) {
+              e.stopPropagation();
+              const value = this.getAttribute("data-value");
+
+              // if (window.i18n) {
+              //   window.i18n.changeLanguage(value);
+              // }
+
+              closeModal();
+            });
+          });
+
+          // Modal 關閉按鈕
+          if (modalClose) {
+            modalClose.addEventListener("click", closeModal);
+          }
+
+          // 點擊遮罩關閉
+          if (modalOverlay) {
+            modalOverlay.addEventListener("click", closeModal);
+          }
+
+          // 點擊外部關閉下拉選單（只針對桌機版）
+          document.addEventListener("click", function (e) {
+            if (!isMobile() && selectItems && selectSelected) {
+              if (!customSelect.contains(e.target)) {
+                selectItems.classList.add("select-hide");
+                selectSelected.classList.remove("select-arrow-active");
+              }
+            }
+          });
         }
-      });
-    }
 
-    // 桌機版選項點擊
-    desktopOptions.forEach(option => {
-      option.addEventListener('click', function(e) {
-        e.stopPropagation();
-        const value = this.getAttribute('data-value');
-        if (selectSelected) {
-          selectSelected.textContent = this.textContent;
+        // ==========================================
+        // 2. 滾動觸發動畫（Intersection Observer）
+        // ==========================================
+        const companyBlock = document.querySelector(".company-introduce-block");
+
+        if (companyBlock && "IntersectionObserver" in window) {
+          const observer = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add("visible");
+                  observer.unobserve(entry.target);
+                }
+              });
+            },
+            { threshold: 0.2 }
+          );
+
+          observer.observe(companyBlock);
         }
-        if (selectItems) {
-          selectItems.classList.add('select-hide');
+
+        // ==========================================
+        // 3. Header 導航選單邏輯
+        // ==========================================
+        const navLinks = document.getElementById("navLinks");
+        const toggleBtn = document.getElementById("toggleBtn");
+        const hint = document.getElementById("mobileHint");
+        const navItems = document.querySelectorAll(".nav-item");
+
+        // 重置所有子選單
+        function resetAllSubMenus() {
+          const allDropdowns = document.querySelectorAll(".dropdown-menu");
+          allDropdowns.forEach(function (menu) {
+            menu.classList.remove("show");
+          });
+          navItems.forEach(function (li) {
+            li.classList.remove(
+              "dropdown-menu-other-close",
+              "dropdown-menu-open"
+            );
+          });
         }
-        if (selectSelected) {
-          selectSelected.classList.remove('select-arrow-active');
+
+        // 漢堡按鈕點擊
+        if (toggleBtn && navLinks) {
+          toggleBtn.addEventListener("click", function (e) {
+            e.stopPropagation();
+            const isActive = navLinks.classList.toggle("active");
+            navLinks.classList.toggle("float-menu");
+            toggleBtn.setAttribute("aria-expanded", isActive.toString());
+
+            if (!isActive) {
+              resetAllSubMenus();
+            }
+          });
         }
-        // 實際使用時取消註解
-        // window.location.href = `?lang=${value}`;
-      });
-    });
 
-    // 手機版選項點擊
-    mobileOptions.forEach(option => {
-      option.addEventListener('click', function(e) {
-        e.stopPropagation();
-        const value = this.getAttribute('data-value');
-        const langNameEl = this.querySelector('.lang-name');
-        const langName = langNameEl ? langNameEl.textContent : '';
-        
-        // 更新選中狀態
-        mobileOptions.forEach(opt => opt.classList.remove('active'));
-        this.classList.add('active');
-        
-        // 更新顯示文字
-        if (selectSelected && langName) {
-          selectSelected.textContent = langName;
-        }
-        
-        // 關閉 Modal
-        closeModal();
-        
-        // 實際使用時取消註解
-        // window.location.href = `?lang=${value}`;
-      });
-    });
+        // 每個導航項目的事件
+        navItems.forEach(function (item) {
+          // 手機版點擊
+          item.addEventListener("click", function (e) {
+            if (window.innerWidth > 820) return;
 
-    // Modal 關閉按鈕
-    if (modalClose) {
-      modalClose.addEventListener('click', closeModal);
-    }
+            const dropdownMenu = item.querySelector(".dropdown-menu");
+            if (!dropdownMenu) return;
 
-    // 點擊遮罩關閉
-    if (modalOverlay) {
-      modalOverlay.addEventListener('click', closeModal);
-    }
+            e.preventDefault();
+            e.stopPropagation();
 
-    // 點擊外部關閉下拉選單（只針對桌機版）
-    document.addEventListener('click', function(e) {
-      if (!isMobile() && selectItems && selectSelected) {
-        if (!customSelect.contains(e.target)) {
-          selectItems.classList.add('select-hide');
-          selectSelected.classList.remove('select-arrow-active');
-        }
-      }
-    });
-  }
+            const isOpening = !dropdownMenu.classList.contains("show");
 
-  // ==========================================
-  // 2. 滾動觸發動畫（Intersection Observer）
-  // ==========================================
-  const companyBlock = document.querySelector('.company-introduce-block');
-  
-  if (companyBlock && 'IntersectionObserver' in window) {
-    const observer = new IntersectionObserver(
-      function(entries) {
-        entries.forEach(function(entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
+            navItems.forEach(function (li) {
+              const otherMenu = li.querySelector(".dropdown-menu");
+              if (li !== item) {
+                if (otherMenu) otherMenu.classList.remove("show");
+                li.classList.toggle("dropdown-menu-other-close", isOpening);
+                li.classList.remove("dropdown-menu-open");
+              } else {
+                li.classList.toggle("dropdown-menu-open", isOpening);
+                li.classList.remove("dropdown-menu-other-close");
+              }
+            });
+
+            dropdownMenu.classList.toggle("show");
+          });
+
+          // 桌機版 Hover
+          item.addEventListener("mouseenter", function () {
+            if (window.innerWidth <= 820) return;
+            const menu = item.querySelector(".dropdown-menu");
+            if (menu) menu.classList.add("show");
+          });
+
+          item.addEventListener("mouseleave", function () {
+            if (window.innerWidth <= 820) return;
+            const menu = item.querySelector(".dropdown-menu");
+            if (menu) menu.classList.remove("show");
+          });
+        });
+
+        // 點擊外部關閉導航選單
+        document.addEventListener("click", function (e) {
+          // 關閉手機提示
+          if (hint && hint.style.display !== "none") {
+            hint.style.display = "none";
+          }
+
+          // 關閉導航選單
+          if (navLinks && toggleBtn) {
+            if (
+              navLinks.classList.contains("active") &&
+              !navLinks.contains(e.target) &&
+              !toggleBtn.contains(e.target)
+            ) {
+              navLinks.classList.remove("active", "float-menu");
+              toggleBtn.setAttribute("aria-expanded", "false");
+              resetAllSubMenus();
+            }
           }
         });
-      },
-      { threshold: 0.2 }
-    );
 
-    observer.observe(companyBlock);
-  }
-
-  // ==========================================
-  // 3. Header 導航選單邏輯
-  // ==========================================
-  const navLinks = document.getElementById('navLinks');
-  const toggleBtn = document.getElementById('toggleBtn');
-  const hint = document.getElementById('mobileHint');
-  const navItems = document.querySelectorAll('.nav-item');
-
-  // 重置所有子選單
-  function resetAllSubMenus() {
-    const allDropdowns = document.querySelectorAll('.dropdown-menu');
-    allDropdowns.forEach(function(menu) {
-      menu.classList.remove('show');
-    });
-    navItems.forEach(function(li) {
-      li.classList.remove('dropdown-menu-other-close', 'dropdown-menu-open');
-    });
-  }
-
-  // 漢堡按鈕點擊
-  if (toggleBtn && navLinks) {
-    toggleBtn.addEventListener('click', function(e) {
-      e.stopPropagation();
-      const isActive = navLinks.classList.toggle('active');
-      navLinks.classList.toggle('float-menu');
-      toggleBtn.setAttribute('aria-expanded', isActive.toString());
-
-      if (!isActive) {
-        resetAllSubMenus();
-      }
-    });
-  }
-
-  // 每個導航項目的事件
-  navItems.forEach(function(item) {
-    
-    // 手機版點擊
-    item.addEventListener('click', function(e) {
-      if (window.innerWidth > 820) return;
-
-      const dropdownMenu = item.querySelector('.dropdown-menu');
-      if (!dropdownMenu) return;
-
-      e.preventDefault();
-      e.stopPropagation();
-
-      const isOpening = !dropdownMenu.classList.contains('show');
-
-      navItems.forEach(function(li) {
-        const otherMenu = li.querySelector('.dropdown-menu');
-        if (li !== item) {
-          if (otherMenu) otherMenu.classList.remove('show');
-          li.classList.toggle('dropdown-menu-other-close', isOpening);
-          li.classList.remove('dropdown-menu-open');
-        } else {
-          li.classList.toggle('dropdown-menu-open', isOpening);
-          li.classList.remove('dropdown-menu-other-close');
-        }
+        // RWD 自動關閉
+        window.addEventListener("resize", function () {
+          if (window.innerWidth > 820) {
+            if (navLinks) {
+              navLinks.classList.remove("active", "float-menu");
+            }
+            if (toggleBtn) {
+              toggleBtn.setAttribute("aria-expanded", "false");
+            }
+            resetAllSubMenus();
+          }
+        });
       });
-
-      dropdownMenu.classList.toggle('show');
-    });
-
-    // 桌機版 Hover
-    item.addEventListener('mouseenter', function() {
-      if (window.innerWidth <= 820) return;
-      const menu = item.querySelector('.dropdown-menu');
-      if (menu) menu.classList.add('show');
-    });
-
-    item.addEventListener('mouseleave', function() {
-      if (window.innerWidth <= 820) return;
-      const menu = item.querySelector('.dropdown-menu');
-      if (menu) menu.classList.remove('show');
-    });
-  });
-
-  // 點擊外部關閉導航選單
-  document.addEventListener('click', function(e) {
-    // 關閉手機提示
-    if (hint && hint.style.display !== 'none') {
-      hint.style.display = 'none';
-    }
-
-    // 關閉導航選單
-    if (navLinks && toggleBtn) {
-      if (
-        navLinks.classList.contains('active') &&
-        !navLinks.contains(e.target) &&
-        !toggleBtn.contains(e.target)
-      ) {
-        navLinks.classList.remove('active', 'float-menu');
-        toggleBtn.setAttribute('aria-expanded', 'false');
-        resetAllSubMenus();
-      }
-    }
-  });
-
-  // RWD 自動關閉
-  window.addEventListener('resize', function() {
-    if (window.innerWidth > 820) {
-      if (navLinks) {
-        navLinks.classList.remove('active', 'float-menu');
-      }
-      if (toggleBtn) {
-        toggleBtn.setAttribute('aria-expanded', 'false');
-      }
-      resetAllSubMenus();
-    }
-  });
-
-});
-
     </script>
   </body>
 </html>

@@ -1,0 +1,12 @@
+# robots.txt for AMC 山太士官網
+
+User-agent: *
+Disallow: /admin/
+Disallow: /private/
+Disallow: /test/
+
+# Sitemap 位置
+Sitemap: https://yourdomain.com/sitemap.xml
+
+# 爬蟲速度限制（每秒1次請求）
+Crawl-delay: 1

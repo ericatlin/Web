@@ -1,0 +1,87 @@
+{
+  "nav": {
+    "about": "회사 소개",
+    "aboutSub": {
+      "concept": "경영 이념",
+      "history": "회사 연혁",
+      "human": "인적 자원",
+      "invest": "투자자 정보"
+    },
+    "products": "제품 및 서비스",
+    "productsSub": {
+      "cutting": "절단 가공",
+      "tape": "차광-반사 테이프",
+      "material": "기능성 소재",
+      "semiconductor": "반도체 재료",
+      "film": "보호 필름",
+      "foam": "폼 테이프",
+      "optical": "광학 접착제"
+    },
+    "quality": "품질 정책",
+    "core": "핵심 기술",
+    "sustainable": "지속 가능 경영",
+    "sustainableSub": {
+      "responsibility": "기업의 사회적 책임",
+      "biodiversity": "생물 다양성 선언",
+      "security": "정보보안 정책",
+      "integrity": "비즈니스 정직성 정책",
+      "labor": "노동 보호"
+    },
+    "contact": "문의하기"
+  },
+  "hint": {
+    "title": "사용 편의를 위해 메뉴가 오른쪽 하단으로 이동되었습니다!",
+    "subtitle": "화면을 터치하여 닫기"
+  },
+  "hero": {
+    "title": "Your Solutions, AMC Materials",
+    "slogan": "Your Solutions, AMC Materials",
+    "cta": "자세히 보기"
+  },
+  "main": {
+    "block1": {
+      "title": "\"품질 고수, 상생 공창\"",
+      "description": "산태사는 품질을 적극적으로 추구하고 다양한 전문 인증을 취득하며, 고객의 요구에 맞춰 다른 전문 인증을 적극적으로 도입하여 제품 품질, 생산 효율성 및 고객 서비스 측면에서 고객의 요구를 충족시키고, 협력이 원활하게 진행되어 상생의 새로운 기회를 함께 창출합니다.",
+      "triangle": {
+        "quality": "품질<br />Quality",
+        "efficiency": "효율성<br />Efficiency",
+        "service": "서비스<br />Service"
+      }
+    },
+    "block2": {
+      "optical": {
+        "title": "광학 재료 절단 제품",
+        "desc": "다양한 크기 및 각종 광학 필름과 OCA 절단 가공 서비스 제공"
+      },
+      "material": {
+        "title": "기능성 소재",
+        "desc": "광학/구조 성형 접착제, 차광-반사 테이프, 탈착 가능 접착제, 보호 필름, 폼 테이프"
+      },
+      "cutting": {
+        "title": "절단 가공",
+        "desc": "다양한 광학 및 산업용 필름 재료의 맞춤형 절단 가공 서비스, 슬리팅 가공, 권취 가공, 라미네이션 가공, 다이커팅 가공 제공"
+      }
+    },
+    "block3": {
+      "intro": "산태사는 핵심 기술 능력의 향상과 발전을 기반으로 시장 수요를 지향하고, 폐기물 감소, 환경 보호, 맞춤화, 비용 우위 등의 전략과 결합하여 관련 공정 기술과 핵심 재료를 개발하고, 공정 기술 능력을 개선하고 향상시켜 다양한 응용 개발의 목적을 달성합니다. 간단히 말해, 끊임없는 혁신과 변화, 성장을 통해 기업의 지속 가능한 경영 목표를 향해 나아갑니다.",
+      "tech1": {
+        "title": "광학 기능 소재",
+        "desc": "광경화 접착제, 광학 접착제, 광학 구조용 수지, 자가 조립 재료"
+      },
+      "tech2": {
+        "title": "접착 응용 소재",
+        "desc": "초고 접착력, 미세 접착력, 고저 접착력 조합, 특수 접착"
+      },
+      "tech3": {
+        "title": "절단 가공 기술",
+        "desc": "CNC, 웨이퍼 절단, FT 이형 절단, 정밀 금형 절단, 라미네이션, 슬리팅, 롤 절단, 다층 필름 복합 가공"
+      }
+    }
+  },
+  "footer": {
+    "policy": "기업 정책",
+    "copyright": "© 2026 산태사 주식회사 All Rights Reserved.",
+    "language": "Language"
+  }
+}
+

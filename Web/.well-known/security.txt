@@ -1,0 +1,12 @@
+# security.txt for AMC 山太士官網
+
+Contact: mailto:security@yourdomain.com
+Contact: https://yourdomain.com/contact.html
+Expires: 2027-12-31T23:59:59.000Z
+Preferred-Languages: zh-TW, en, ja
+Canonical: https://yourdomain.com/.well-known/security.txt
+Policy: https://yourdomain.com/security-policy.html
+Hiring: https://yourdomain.com/human.html
+
+# 漏洞回報獎勵計畫
+Acknowledgments: https://yourdomain.com/security-acknowledgments.html

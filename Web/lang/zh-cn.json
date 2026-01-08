@@ -1,0 +1,87 @@
+
+{
+  "nav": {
+    "about": "关于我们",
+    "aboutSub": {
+      "concept": "经营理念",
+      "history": "公司沿革",
+      "human": "人力资源",
+      "invest": "投资人专区"
+    },
+    "products": "产品服务",
+    "productsSub": {
+      "cutting": "裁切加工",
+      "tape": "遮光-反射胶带",
+      "material": "机能材料",
+      "semiconductor": "半导体材料",
+      "film": "保护膜",
+      "foam": "泡棉胶带",
+      "optical": "光学胶"
+    },
+    "quality": "品质政策",
+    "core": "核心技术",
+    "sustainable": "永续经营",
+    "sustainableSub": {
+      "responsibility": "企业社会责任",
+      "biodiversity": "生物多样性宣言",
+      "security": "信息安全政策",
+      "integrity": "商业诚信政策",
+      "labor": "劳动保障"
+    },
+    "contact": "联络窗口"
+  },
+   "hint": {
+    "title": "为了方便您操作，菜单已移至右下方！",
+    "subtitle": "点击任意位置关闭提示"
+  },
+  "hero": {
+    "title": "Your Solutions, AMC Materials",
+    "slogan": "Your Solutions, AMC Materials",
+    "cta": "了解更多"
+  },
+  "main": {
+    "block1": {
+      "title": "「坚持品质，共创双赢」",
+      "description": "山太士积极要求品质，通过各项专业认证，并配合客户需求，积极导入其他专业认证，期能在产品品质、生产效率及客户服务等方面符合客户需求，让合作顺利，共同创造双赢之新契机。",
+      "triangle": {
+        "quality": "品质<br />Quality",
+        "efficiency": "效率<br />Efficiency",
+        "service": "服务<br />Service"
+      }
+    },
+    "block2": {
+      "optical": {
+        "title": "光学材料裁切成品",
+        "desc": "提供各种尺寸及各类光学膜与OCA裁切加工服务"
+      },
+      "material": {
+        "title": "机能性材料",
+        "desc": "光学/结构成型胶、遮光-反射胶带、可拨胶、保护膜、泡棉胶带"
+      },
+      "cutting": {
+        "title": "裁切加工",
+        "desc": "提供各式光学及工业用途膜材之客制化裁切加工服务、切卷加工分条、覆卷加工、卷材贴合加工、膜切加工"
+      }
+    },
+    "block3": {
+      "intro": "山太士奠基于核心技术能力之提升与发展，以市场需求为导向，配合减废、环境保护、客制化、优势成本等策略，开发出相关制程技术与关键材料，改善并增进制程技术能力，达成多元化应用发展之目的。简而言之，以不断的求新求变和成长，迈向企业永续经营之目标。",
+      "tech1": {
+        "title": "光学机能材料",
+        "desc": "光固化胶、光学胶、光学结构用树脂、自组装材料"
+      },
+      "tech2": {
+        "title": "粘着应用材料",
+        "desc": "超高粘力、微粘力、高低粘力搭配、特殊粘着"
+      },
+      "tech3": {
+        "title": "裁切加工技术",
+        "desc": "CNC、晶圆切割、FT异型切割、精密模切、贴合、分条、切卷、多层膜材复合加工"
+      }
+    }
+  },
+  "footer": {
+    "policy": "企业政策",
+    "copyright": "© 2026 山太士股份有限公司 保留所有权利",
+    "language": "Language"
+  }
+}
