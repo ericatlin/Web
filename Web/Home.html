@@ -9,16 +9,7 @@
       content="山太士(AMC)專注於半導體材料、光學膠與精密裁切加工，提供全球一線客戶頂級材料解決方案。"
     />
     <meta name="keywords" content="山太士, AMC, 半導體材料, 光學膠, 裁切加工" />
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="default-src 'self'; 
-                   script-src 'self' 'unsafe-inline' https://fonts.googleapis.com; 
-                   style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; 
-                   font-src 'self' https://fonts.gstatic.com; 
-                   img-src 'self' data:;"
-    />
-    <!-- ✅ 改用這個 -->
-<meta http-equiv="Content-Security-Policy" content="frame-ancestors 'none';">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; frame-ancestors 'none';" />
 
     <!-- 防止 MIME 類型嗅探 -->
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
@@ -29,11 +20,14 @@
       http-equiv="Strict-Transport-Security"
       content="max-age=31536000; includeSubDomains"
     />
-
+    <meta property="og:title" content="AMC 山太士 - 先進光學與半導體材料" />
+    <meta property="og:description" content="山太士(AMC)專注於半導體材料、光學膠與精密裁切加工..." />
+    <meta property="og:image" content="https://你的網域/img/about/og_img.png" />
+    <meta property="og:url" content="https://你的網域.com" />
     <title>AMC 山太士 - 先進光學與半導體材料</title>
 
     <!-- ========== Stylesheets ========== -->
-    <link rel="stylesheet" href="/Web/css/Home.css" type="text/css" />
+    <link rel="stylesheet" href="./css/Home.css" type="text/css" />
 
     <!-- ========== Fonts ========== -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -54,7 +48,7 @@
         <!-- Logo 區域 -->
         <div class="logo">
           <a href="index.html" aria-label="回到首頁">
-            <img src="./img/all/logo.png" alt="AMC 山太士 Logo" />
+            <img src="./img/all/logo.png" width="127" height="74" alt="AMC 山太士 Logo" />
           </a>
         </div>
 
@@ -314,6 +308,8 @@
                   src="./img/about/languages.png"
                   alt="語言圖示"
                   aria-hidden="true"
+                  width="512"
+                  height="512"
                 />
               </button>
               <ul class="dropdown-menu" role="menu" aria-label="語言選擇">
@@ -451,19 +447,19 @@
       </div>
       <div class="shadow"></div>
       <div class="main-block2">
-        <a href="" class="optical-cutting-service block2-same">
+        <a  class="optical-cutting-service block2-same">
           <h2 data-i18n="main.block2.optical.title">光學材料裁切成品</h2>
           <p data-i18n="main.block2.optical.desc">
             提供各種尺寸及各類光學膜與OCA裁切加工服務
           </p>
         </a>
-        <a href="" class="functional-material block2-same">
+        <a  class="functional-material block2-same">
           <h2 data-i18n="main.block2.material.title">機能性材料</h2>
           <p data-i18n="main.block2.material.desc">
             光學/結構成型膠、遮光-反射膠帶、可撥膠、保護膜、泡棉膠帶
           </p>
         </a>
-        <a href="" class="cutting-service block2-same">
+        <a  class="cutting-service block2-same">
           <h2 data-i18n="main.block2.cutting.title">裁切加工</h2>
           <p data-i18n="main.block2.cutting.desc">
             提供各式光學及工業用途膜材之客製化裁切加工服務、切捲加工分條、覆捲加工、捲材貼合加工、膜切加工
@@ -474,9 +470,11 @@
       <div class="main-block3">
         <div class="company-introduce-block">
           <img
-            src="./img/index/p4.jpg"
+            src="./img/index/p5.png"
             alt="company-photo"
             class="company-introduce-img"
+            width="1368"
+            height="768"
           />
           <p data-i18n="main.block3.intro">
             山太士奠基於核心技術能力之提升與發展，以市場需求為導向，配合減廢、環境保護、客製化、優勢成本等策略，開發出相關製程技術與關鍵材料，改善並增進製程技術能力，達成多元化應用發展之目的。簡而言之，以不斷的求新求變和成長，邁向企業永續經營之目標。
@@ -485,7 +483,7 @@
         <div class="core-technologies">
           <div class="optical-functional-materials core-technologies-same">
             <div class="core-technologies-imgbox">
-              <img src="./img/core/icon1.png" alt="" />
+              <img src="./img/core/icon1-1.png" alt="" width="80" height="80" loading="lazy" />
             </div>
             <div class="core-technologies-txt">
               <h2 data-i18n="main.block3.tech1.title">光學機能材料</h2>
@@ -496,7 +494,7 @@
           </div>
           <div class="adhesive-application core-technologies-same">
             <div class="core-technologies-imgbox">
-              <img src="./img/core/icon2.png" alt="" />
+              <img src="./img/core/icon2-1.png" alt="" width="80" height="80" loading="lazy" />
             </div>
             <div class="core-technologies-txt">
               <h2 data-i18n="main.block3.tech2.title">黏著應用材料</h2>
@@ -507,7 +505,7 @@
           </div>
           <div class="precision-cutting core-technologies-same">
             <div class="core-technologies-imgbox">
-              <img src="./img/core/icon3.png" alt="" />
+              <img src="./img/core/icon3-1.png" alt="" width="80" height="80" loading="lazy" />
             </div>
             <div class="core-technologies-txt">
               <h2 data-i18n="main.block3.tech3.title">裁切加工技術</h2>
@@ -718,7 +716,7 @@
 
           <div class="footer-logo">
             <a href="index.html" aria-label="回到首頁">
-              <img src="./img/all/logo.png" alt="山太士 AMC Logo" />
+              <img src="./img/all/logo.png" alt="山太士 AMC Logo" width="127" height="74" loading="lazy" />
             </a>
           </div>
         </nav>
@@ -878,24 +876,36 @@
         }
 
         // ==========================================
-        // 2. 滾動觸發動畫（Intersection Observer）
+        // 2. 滾動觸發動畫（Intersection Observer 通用優化版）
         // ==========================================
-        const companyBlock = document.querySelector(".company-introduce-block");
-
-        if (companyBlock && "IntersectionObserver" in window) {
+        if ("IntersectionObserver" in window) {
+          // 1. 我們只建立「一個」觀察器
           const observer = new IntersectionObserver(
-            function (entries) {
+            function (entries, observer) {
               entries.forEach(function (entry) {
                 if (entry.isIntersecting) {
                   entry.target.classList.add("visible");
-                  observer.unobserve(entry.target);
+                  observer.unobserve(entry.target); // 觸發後就停止觀察該元素
                 }
               });
             },
             { threshold: 0.2 }
           );
 
-          observer.observe(companyBlock);
+          // 2. 用 querySelectorAll 一次抓出所有需要動畫的區塊
+          // (這裡用逗號分隔，就像 CSS 選擇器一樣，把兩個 class 都選起來)
+          const animatedBlocks = document.querySelectorAll(".company-introduce-block, .core-technologies");
+          
+          // 3. 用 forEach 迴圈，把這些區塊一個個交給剛剛建立的 observer 去監視
+          animatedBlocks.forEach(function(block) {
+            observer.observe(block);
+          });
+        } else {
+          // 如果瀏覽器不支援 Intersection Observer，就直接顯示所有區塊（退化處理）
+          const animatedBlocks = document.querySelectorAll(".company-introduce-block, .core-technologies");
+          animatedBlocks.forEach(function(block) {
+            block.classList.add("visible");
+          });
         }
 
         // ==========================================
