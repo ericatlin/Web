@@ -9,29 +9,46 @@
     },
     "products": "Products & Services",
     "productsSub": {
-      "cutting": "Cutting Services",
-      "tape": "Shading-Reflective Tape",
+      "cutting": "Converting Services",
+      "tape": "Shading & Reflective Tape",
       "material": "Functional Materials",
       "semiconductor": "Semiconductor Materials",
       "film": "Protective Film",
       "foam": "Foam Tape",
-      "optical": "Optical Adhesive"
+      "optical": "Optical Clear Adhesive"
     },
     "quality": "Quality Policy",
-    "core": "Core Technology",
+    "core": "Core Technologies",
     "sustainable": "Sustainability",
     "sustainableSub": {
       "responsibility": "Corporate Social Responsibility",
-      "biodiversity": "Biodiversity Statement",
+      "biodiversity": "Biodiversity Declaration",
       "security": "Information Security Policy",
       "integrity": "Business Integrity Policy",
-      "labor": "Labor Protection"
+      "labor": "Labor Rights & Protection"
     },
-    "contact": "Contact"
+    "contactWindow": "Contact Us",
+    "contact": {
+      "taiwanHQ": "Taiwan Headquarters",
+      "taiwan": "AMC Materials Co., Ltd.",
+      "taiwanAddress": "No. 158, Ln. 28, Yanhe St., Zhubei City, Hsinchu County, Taiwan",
+      "tel": "Tel:",
+      "fax": "Fax:",
+      "dept": "Business Unit Contacts",
+      "deptmail": {
+        "PMBU": "Precision Materials BU:",
+        "CPBU": "Converting Processing BU:"
+      },
+      "DGHQ": "Dongguan Factory",
+      "DG": "Dongguan AMC Optoelectronics Technology Co., Ltd.",
+      "DGAddress": "Room 402, Bldg 1, Shengluo Tech Park, No. 5 Zhensheng Rd., Qingxi Town, Dongguan City, China",
+      "DGtel": "Tel:",
+      "DGfax": "Fax:"
+    }
   },
-    "hint": {
+  "hint": {
     "title": "For your convenience, the menu has been moved to the bottom right!",
-    "subtitle": "Tap anywhere to close"
+    "subtitle": "Click anywhere to dismiss"
   },
   "hero": {
     "title": "Your Solutions, AMC Materials",
@@ -40,8 +57,8 @@
   },
   "main": {
     "block1": {
-      "title": "\"Quality First, Win-Win Together\"",
-      "description": "AMC actively pursues quality, obtains various professional certifications, and cooperates with customer requirements to actively introduce other professional certifications, in order to meet customer needs in product quality, production efficiency and customer service, and create new win-win opportunities.",
+      "title": "Insisting on Quality, Creating Win-Win Outcomes",
+      "description": "AMC Materials strictly demands high quality and has passed various professional certifications. We actively introduce further professional standards to meet customer needs. By prioritizing product quality, production efficiency, and customer service, we ensure smooth cooperation and mutually beneficial new opportunities.",
       "triangle": {
         "quality": "Quality",
         "efficiency": "Efficiency",
@@ -50,38 +67,37 @@
     },
     "block2": {
       "optical": {
-        "title": "Optical Material Cutting",
-        "desc": "Provide cutting services for various sizes of optical films and OCA"
+        "title": "Optical Material Converting",
+        "desc": "Providing cutting and converting services for various dimensions of optical films and OCA."
       },
       "material": {
         "title": "Functional Materials",
-        "desc": "Optical/structural adhesives, shading-reflective tapes, removable adhesives, protective films, foam tapes"
+        "desc": "Optical/structural molding adhesives, shading & reflective tapes, peelable adhesives, protective films, and foam tapes."
       },
       "cutting": {
-        "title": "Cutting Services",
-        "desc": "Provide customized cutting services for optical and industrial films, slitting, rewinding, lamination, die-cutting"
+        "title": "Converting Services",
+        "desc": "Customized converting services for optical and industrial films, including slitting, rewinding, lamination, and precision die-cutting."
       }
     },
     "block3": {
-      "intro": "AMC is based on the improvement and development of core technical capabilities, market demand-oriented, combined with waste reduction, environmental protection, customization, cost advantages and other strategies, to develop related process technologies and key materials, improve and enhance process technical capabilities, and achieve diversified application development goals.",
+      "intro": "Driven by market demand and founded on our core technological capabilities, AMC Materials develops advanced process technologies and key materials. We align with strategies such as waste reduction, environmental protection, customization, and cost advantage. Through continuous innovation and growth, we strive toward the goal of sustainable corporate operations.",
       "tech1": {
         "title": "Optical Functional Materials",
-        "desc": "UV adhesive, optical adhesive, optical structural resin, self-assembly materials"
+        "desc": "UV curing adhesives, optical clear adhesives (OCA), optical structural resins, and self-assembling materials."
       },
       "tech2": {
         "title": "Adhesive Application Materials",
-        "desc": "Ultra-high adhesion, micro adhesion, high-low adhesion combination, special adhesion"
+        "desc": "Ultra-high adhesion, micro-adhesion, mixed high/low adhesion, and special adhesive formulations."
       },
       "tech3": {
-        "title": "Cutting Processing Technology",
-        "desc": "CNC, wafer cutting, FT special cutting, precision die cutting, lamination, slitting, roll cutting, multi-layer film composite processing"
+        "title": "Converting Technologies",
+        "desc": "CNC, wafer dicing, FT special-shaped cutting, precision die-cutting, lamination, slitting, roll cutting, and multi-layer film composite processing."
       }
     }
   },
   "footer": {
     "policy": "Corporate Policy",
-    "copyright": "© 2026 Alliance Material Co., Ltd. All Rights Reserved.",
+    "copyright": "© 2026 AMC Materials Co., Ltd. All Rights Reserved.",
     "language": "Language"
   }
 }
-

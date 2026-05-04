@@ -21,39 +21,38 @@ class I18n {
 
   // 載入語言 JSON 檔案
   async loadLanguage(lang) {
-  console.log('=== 開始載入語言 ===', lang); // 👈 新增
-  
-  // 驗證語言代碼
-  if (!this.allowedLangs.includes(lang)) {
-    console.error(`Invalid language: ${lang}`);
-    lang = 'zh-tw';
-  }
-
-  try {
-    console.log('正在 fetch:', `./lang/${lang}.json`); // 👈 新增
-    const response = await fetch(`./lang/${lang}.json`);
+    console.log('=== 開始載入語言 ===', lang); 
     
-    if (!response.ok) {
-      throw new Error(`Failed to load language file: ${lang}`);
+    // 驗證語言代碼
+    if (!this.allowedLangs.includes(lang)) {
+      console.error(`Invalid language: ${lang}`);
+      lang = 'zh-tw';
     }
-    
-    this.translations = await response.json();
-    console.log('載入成功，翻譯內容:', this.translations); // 👈 新增
-    
-    this.currentLang = lang;
-    this.setStoredLang(lang);
-    this.applyTranslations();
-    this.updateLangSelector();
-    
-    console.log('=== 語言切換完成 ===', lang); // 👈 新增
-  } catch (error) {
-    console.error('Error loading language:', error);
-    if (lang !== 'zh-tw') {
-      this.loadLanguage('zh-tw');
+
+    try {
+      console.log('正在 fetch:', `./lang/${lang}.json`); 
+      const response = await fetch(`./lang/${lang}.json`);
+      
+      if (!response.ok) {
+        throw new Error(`Failed to load language file: ${lang}`);
+      }
+      
+      this.translations = await response.json();
+      console.log('載入成功，翻譯內容:', this.translations); 
+      
+      this.currentLang = lang;
+      this.setStoredLang(lang);
+      this.applyTranslations();
+      this.updateLangSelector();
+      
+      console.log('=== 語言切換完成 ===', lang); 
+    } catch (error) {
+      console.error('Error loading language:', error);
+      if (lang !== 'zh-tw') {
+        this.loadLanguage('zh-tw');
+      }
     }
   }
-}
-
 
   // 根據 key 取得翻譯文字
   getTranslation(key) {
@@ -77,17 +76,24 @@ class I18n {
       const key = element.getAttribute('data-i18n');
       const translation = this.getTranslation(key);
       
-      // 如果是 input/textarea 的 placeholder
-      if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-        element.placeholder = translation;
-      } 
-      // 如果內容包含 HTML（如 <br>）
-      else if (translation.includes('<br')) {
-        element.innerHTML = translation;
-      }
-      // 一般文字
-      else {
-        element.textContent = translation;
+      // 👇 加入防護罩：確保 translation 是字串才執行 .includes()
+      if (typeof translation === 'string') {
+        // 如果是 input/textarea 的 placeholder
+        if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+          element.placeholder = translation;
+        } 
+        // 如果內容包含 HTML（如 <br>）
+        else if (translation.includes('<br')) {
+          element.innerHTML = translation;
+        }
+        // 一般文字
+        else {
+          element.textContent = translation;
+        }
+      } else {
+        // 如果抓到物件或 undefined，印出警告但不讓程式崩潰
+        console.warn(`翻譯金鑰 [${key}] 格式錯誤或未對應到字串，保留畫面原文字。`);
+        element.innerHTML = element.innerHTML;
       }
     });
 
@@ -113,7 +119,7 @@ class I18n {
 
     // 更新手機版 Modal 的勾選狀態
     document.querySelectorAll('.lang-option').forEach(option => {
-      const value = option.getAttribute('data-lang'); // 👈 修改點 1
+      const value = option.getAttribute('data-lang'); 
       const checkMark = option.querySelector('.lang-check');
       if (value === this.currentLang) {
         option.classList.add('active');
@@ -124,7 +130,7 @@ class I18n {
       }
     });
 
-    // 👇 修改點 2：新增 Header 導航列的語言連結狀態更新
+    // 更新 Header 導航列的語言連結狀態更新
     document.querySelectorAll('.language-item .lang-switch').forEach(link => {
       const value = link.getAttribute('data-lang');
       if (value === this.currentLang) {
@@ -137,38 +143,38 @@ class I18n {
 
   // 切換語言
   changeLanguage(lang) {
-  // 👇 新增：檢查語言代碼是否有效
-  if (!lang || !this.allowedLangs.includes(lang)) {
-    console.error('Invalid language code:', lang);
-    return;
+    // 檢查語言代碼是否有效
+    if (!lang || !this.allowedLangs.includes(lang)) {
+      console.error('Invalid language code:', lang);
+      return;
+    }
+    
+    // 防止重複載入相同語言
+    if (lang === this.currentLang) {
+      console.log('Already using language:', lang);
+      return;
+    }
+    
+    console.log('Changing language to:', lang); 
+    this.loadLanguage(lang);
   }
-  
-  // 👇 新增：防止重複載入相同語言
-  if (lang === this.currentLang) {
-    console.log('Already using language:', lang);
-    return;
-  }
-  
-  console.log('Changing language to:', lang); // 除錯用
-  this.loadLanguage(lang);
-}
 }
 
 // 初始化多語系
 const i18n = new I18n();
 // 在 i18n.js 最上方加上這個全域標記
-let eventsBound = false; // 👈 防止重複綁定
+let eventsBound = false; 
 
 // 頁面載入時套用語言
 document.addEventListener('DOMContentLoaded', function() {
-  // 👇 如果已經綁定過，直接返回
+  // 如果已經綁定過，直接返回
   if (eventsBound) {
     console.log('事件已綁定，跳過重複綁定');
     return;
   }
   
-  eventsBound = true; // 👈 標記為已綁定
-  console.log('開始綁定事件監聽器'); // 除錯用
+  eventsBound = true; 
+  console.log('開始綁定事件監聽器'); 
 
   // 載入預設或已儲存的語言
   i18n.loadLanguage(i18n.currentLang);
@@ -253,10 +259,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  console.log('所有事件綁定完成'); // 除錯用
+  console.log('所有事件綁定完成'); 
 });
-
-
 
 // 暴露到全域
 window.i18n = i18n;

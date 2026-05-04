@@ -27,7 +27,22 @@
       "integrity": "商業誠信政策",
       "labor": "勞動保障"
     },
-    "contact": "聯絡窗口"
+    "contactWindow": "聯絡窗口",
+    "contact": {
+      "taiwan": "山太士股份有限公司",
+      "taiwanAddress": "新竹縣竹北市沿河街28巷158號",
+      "tel": "電話:",
+      "fax": "傳真:",
+      "dept": "各事業部聯絡窗口",
+      "deptmail": {
+        "PMBU": "精密材料事業部Mail：",
+        "CPBU": "裁切加工事業部Mail："
+      },
+      "DG": "東莞山技光電科技有限公司",
+      "DGAddress": "東莞市清溪鎮青皇村振升路5號圣洛科技園1號樓402",
+      "DGtel": "電話:",
+      "DGfax": "傳真:"
+    }
   },
    "hint": {
     "title": "為了方便您操作，選單已移至右下方！",

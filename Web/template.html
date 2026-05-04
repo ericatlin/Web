@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-TW">
   <head>
     <!-- ========== Meta Tags ========== -->
@@ -9,10 +9,7 @@
       content="山太士(AMC)專注於半導體材料、光學膠與精密裁切加工，提供全球一線客戶頂級材料解決方案。"
     />
     <meta name="keywords" content="山太士, AMC, 半導體材料, 光學膠, 裁切加工" />
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self' 'unsafe-inline' https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; "
-    />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; frame-ancestors 'none';" />
 
     <!-- 防止 MIME 類型嗅探 -->
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
@@ -24,44 +21,13 @@
       content="max-age=31536000; includeSubDomains"
     />
     <meta property="og:title" content="AMC 山太士 - 先進光學與半導體材料" />
-    <meta
-      property="og:description"
-      content="山太士(AMC)專注於半導體材料、光學膠與精密裁切加工..."
-    />
-    <meta property="og:image" content="http://你的網域/img/about/og_img.png" />
-    <meta property="og:url" content="http://www.amctape.com/index.html" />
-    <!-- 專給 AI 爬蟲看的企業結構化資料名片 -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "山太士股份有限公司 (AMC)",
-        "alternateName": "Alliance Material Co., Ltd.",
-        "url": "https://www.amctape.com",
-        "logo": "https://www.amctape.com/img/all/logonew.png",
-        "description": "專注於半導體材料、光學膠、機能材料與精密裁切加工，提供全球一線客戶頂級材料解決方案。",
-        "industry": "半導體材料與光學材料",
-        "contactPoint": [
-          {
-            "@type": "ContactPoint",
-            "telephone": "+886-3-5550999",
-            "contactType": "台灣總公司客服",
-            "areaServed": "TW",
-            "availableLanguage": ["Traditional Chinese", "English"]
-          },
-          {
-            "@type": "ContactPoint",
-            "telephone": "+86-769-89298288",
-            "contactType": "東莞廠聯絡窗口",
-            "areaServed": "CN"
-          }
-        ]
-      }
-    </script>
+    <meta property="og:description" content="山太士(AMC)專注於半導體材料、光學膠與精密裁切加工..." />
+    <meta property="og:image" content="https://你的網域/img/about/og_img.png" />
+    <meta property="og:url" content="https://你的網域.com" />
     <title>AMC 山太士 - 先進光學與半導體材料</title>
 
     <!-- ========== Stylesheets ========== -->
-    <link rel="stylesheet" href="./css/Home.css" type="text/css" />
+    <link rel="stylesheet" href="./css/template.css" type="text/css" />
 
     <!-- ========== Fonts ========== -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -71,11 +37,9 @@
       rel="stylesheet"
       crossorigin="anonymous"
     />
-    <link rel="preload" as="image" href="/my-code/Web/img/about/AMC_P.png" />
   </head>
 
   <body>
-    <a href="#main-content" class="skip-link">跳過導覽，直接到主內容</a>
     <!-- ==========================================
          HEADER - 導航列
          ========================================== -->
@@ -84,12 +48,7 @@
         <!-- Logo 區域 -->
         <div class="logo">
           <a href="Home.html" aria-label="回到首頁">
-            <img
-              src="./img/all/logonew.png"
-              width="127"
-              height="74"
-              alt="AMC 山太士 Logo"
-            />
+            <img src="./img/all/logonew.png" width="127" height="74" alt="AMC 山太士 Logo" />
           </a>
         </div>
 
@@ -331,7 +290,7 @@
                 href="contact.html"
                 class="nav-link"
                 role="menuitem"
-                data-i18n="nav.contactWindow"
+                data-i18n="nav.contact"
                 >聯絡窗口</a
               >
             </li>
@@ -464,117 +423,8 @@
     <!-- ==========================================
          Main Content
          ========================================== -->
-    <main id="main-content" role="main">
-      <div class="main-block1">
-        <div class="main-pic">
-          <div class="triangle-container" id="triangleContainer">
-            <div class="AMCtriangle"></div>
-            <div class="triangle-text">
-              <p data-i18n="main.block1.triangle.quality">Quality<br />品質</p>
-              <p data-i18n="main.block1.triangle.efficiency">
-                Efficiency<br />效率
-              </p>
-              <p data-i18n="main.block1.triangle.service">Service<br />服務</p>
-            </div>
-          </div>
-        </div>
-        <div class="main-introduce">
-          <!-- 介紹內容區 -->
-          <h2 data-i18n="main.block1.title">「堅持品質，共創雙贏」</h2>
-          <h3 data-i18n="main.block1.description">
-            山太士積極要求品質，通過各項專業認證，並配合客戶需求，積極導入其他專業認證，期能在產品品質、生產效率及客戶服務等方面符合客戶需求，讓合作順利，共同創造雙贏之新契機。
-          </h3>
-        </div>
-      </div>
-      <div class="shadow"></div>
-      <div class="main-block2">
-        <div class="optical-cutting-service block2-same">
-          <h2 data-i18n="main.block2.optical.title">光學材料裁切成品</h2>
-          <p data-i18n="main.block2.optical.desc">
-            提供各種尺寸及各類光學膜與OCA裁切加工服務
-          </p>
-        </div>
-        <div class="functional-material block2-same">
-          <h2 data-i18n="main.block2.material.title">機能性材料</h2>
-          <p data-i18n="main.block2.material.desc">
-            光學/結構成型膠、遮光-反射膠帶、可撥膠、保護膜、泡棉膠帶
-          </p>
-        </div>
-        <div class="cutting-service block2-same">
-          <h2 data-i18n="main.block2.cutting.title">裁切加工</h2>
-          <p data-i18n="main.block2.cutting.desc">
-            提供各式光學及工業用途膜材之客製化裁切加工服務、切捲加工分條、覆捲加工、捲材貼合加工、膜切加工
-          </p>
-        </div>
-      </div>
-      <div class="shadow"></div>
-      <div class="main-block3">
-        <div class="company-introduce-block">
-          <img
-            src="./img/index/p5.png"
-            alt="company-photo"
-            class="company-introduce-img"
-            width="1368"
-            height="768"
-          />
-          <p data-i18n="main.block3.intro">
-            山太士奠基於核心技術能力之提升與發展，以市場需求為導向，配合減廢、環境保護、客製化、優勢成本等策略，開發出相關製程技術與關鍵材料，改善並增進製程技術能力，達成多元化應用發展之目的。簡而言之，以不斷的求新求變和成長，邁向企業永續經營之目標。
-          </p>
-        </div>
-        <div class="core-technologies">
-          <div class="optical-functional-materials core-technologies-same">
-            <div class="core-technologies-imgbox">
-              <img
-                src="./img/core/icon1-1.png"
-                alt=""
-                width="80"
-                height="80"
-                loading="lazy"
-              />
-            </div>
-            <div class="core-technologies-txt">
-              <h2 data-i18n="main.block3.tech1.title">光學機能材料</h2>
-              <p data-i18n="main.block3.tech1.desc">
-                光固化膠、光學膠、光學結構用樹脂、自組裝材料
-              </p>
-            </div>
-          </div>
-          <div class="adhesive-application core-technologies-same">
-            <div class="core-technologies-imgbox">
-              <img
-                src="./img/core/icon2-1.png"
-                alt=""
-                width="80"
-                height="80"
-                loading="lazy"
-              />
-            </div>
-            <div class="core-technologies-txt">
-              <h2 data-i18n="main.block3.tech2.title">黏著應用材料</h2>
-              <p data-i18n="main.block3.tech2.desc">
-                超高黏力、微黏力、高低黏力搭配、特殊黏著
-              </p>
-            </div>
-          </div>
-          <div class="precision-cutting core-technologies-same">
-            <div class="core-technologies-imgbox">
-              <img
-                src="./img/core/icon3-1.png"
-                alt=""
-                width="80"
-                height="80"
-                loading="lazy"
-              />
-            </div>
-            <div class="core-technologies-txt">
-              <h2 data-i18n="main.block3.tech3.title">裁切加工技術</h2>
-              <p data-i18n="main.block3.tech3.desc">
-                CNC、晶圓切割、FT異型切割、精密糢切、貼合、分條、切捲、多層膜材複合加工
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+    <main role="main">
+      
     </main>
 
     <footer class="site-footer">
@@ -703,7 +553,7 @@
                 <a
                   href="contact.html"
                   class="footer-link"
-                  data-i18n="nav.contactWindow"
+                  data-i18n="nav.contact"
                   >聯絡窗口</a
                 >
               </li>
@@ -773,100 +623,9 @@
             </div>
           </div>
 
-          <div class="footer-map">
-            <a
-              href="https://maps.app.goo.gl/GHsJYCFgrDNaJMH29"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="static-map-link"
-            >
-              <!-- src 請換成你們截好的地圖圖檔 (建議比例 16:9 或 4:3) -->
-              <img
-                src="./img/index/map-company.png"
-                alt="山太士台灣總公司 Google Map 位置"
-                loading="lazy"
-              />
-
-              <!-- 懸停時會出現的半透明遮罩與提示文字 -->
-              <div class="map-overlay">
-                <span
-                  >📍 Open in google map</span
-                >
-              </div>
-            </a>
-          </div>
-
-          <div class="footer-contact-taiwan-detail">
-            <h4>台灣總公司</h4>
-            <p class="footer-contact" data-i18n="nav.contact.taiwan">
-              山太士股份有限公司
-            </p>
-            <p data-i18n="nav.contact.taiwanAddress">
-              新竹縣竹北市沿河街28巷158號
-            </p>
-            <div>
-              <span data-i18n="nav.contact.tel">電話:</span>
-              <span>+886-3-5550999</span>
-            </div>
-            <div>
-              <span data-i18n="nav.contact.fax">傳真:</span>
-              <span>+886-3-5551717</span>
-            </div>
-            <!-- <p data-i18n="nav.contact.tel">電話:</p><span>+886-3-5550999</span>
-            <p data-i18n="nav.contact.fax">傳真:</p><span>+886-3-5551717</span> -->
-          </div>
-          <div class="footer-contact-dept-detail">
-            <h4>台灣部門聯絡方式</h4>
-            <p class="footer-contact" data-i18n="nav.contact.dept">
-              各事業部聯絡窗口
-            </p>
-            <div>
-              <span data-i18n="nav.contact.deptmail.PMBU"
-                >精密材料事業部Mail：</span
-              >
-              <span>material@amctape.com</span>
-            </div>
-            <div>
-              <span data-i18n="nav.contact.deptmail.CPBU"
-                >裁切加工事業部Mail：</span
-              >
-              <span>convert@amctape.com</span>
-            </div>
-            <!-- <p data-i18n="nav.contact.deptmail.PMBU">精密材料事業部Mail：</p>
-            <span>material@amctape.com</span>
-            <p data-i18n="nav.contact.deptmail.CPBU">裁切加工事業部Mail：</p>
-            <span>convert@amctape.com</span> -->
-          </div>
-          <div class="footer-contact-DG-detail">
-            <h4>東莞廠</h4>
-            <p class="footer-contact" data-i18n="nav.contact.DG">
-              東莞山技光電科技有限公司
-            </p>
-            <p data-i18n="nav.contact.DGAddress">
-              東莞市清溪鎮青皇村振升路5號圣洛科技園1號樓402
-            </p>
-            <div>
-              <span data-i18n="nav.contact.DGtel">電話:</span>
-              <span>+86-769-89298288</span>
-            </div>
-            <div>
-              <span data-i18n="nav.contact.DGfax">傳真:</span>
-              <span>+86-769-89179583</span>
-            </div>
-            <!-- <p data-i18n="nav.contact.DGtel">電話:</p>
-            <span>+86-769-89298288</span>
-            <p data-i18n="nav.contact.DGfax">傳真:</p>
-            <span>+86-769-89179583</span> -->
-          </div>
           <div class="footer-logo">
             <a href="index.html" aria-label="回到首頁">
-              <img
-                src="./img/all/logonew.png"
-                alt="山太士 AMC Logo"
-                width="127"
-                height="74"
-                loading="lazy"
-              />
+              <img src="./img/all/logonew.png" alt="山太士 AMC Logo" width="127" height="74" loading="lazy" />
             </a>
           </div>
         </nav>
@@ -918,8 +677,8 @@
          ========================================== -->
     <script src="./js/i18n.js"></script>
 
-<!-- ==========================================
-         JAVASCRIPT - 導航邏輯 (最終修復版)
+    <!-- ==========================================
+         JAVASCRIPT - 導航邏輯
          ========================================== -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
@@ -929,23 +688,37 @@
         const customSelect = document.querySelector(".custom-select");
         const langModal = document.querySelector(".lang-modal");
 
-        function isMobile() {
-          return window.innerWidth <= 830;
-        }
-
-        function closeModal() {
-          if (langModal) {
-            langModal.classList.remove("active");
-            document.body.style.overflow = "";
-          }
-        }
-
         if (customSelect) {
           const selectSelected = customSelect.querySelector(".select-selected");
           const selectItems = customSelect.querySelector(".select-items");
-          const desktopOptions = selectItems ? selectItems.querySelectorAll("div") : [];
-          const mobileOptions = langModal ? langModal.querySelectorAll(".lang-option") : [];
+          const desktopOptions = selectItems
+            ? selectItems.querySelectorAll("div")
+            : [];
 
+          const modalOverlay = langModal
+            ? langModal.querySelector(".lang-modal-overlay")
+            : null;
+          const modalClose = langModal
+            ? langModal.querySelector(".lang-modal-close")
+            : null;
+          const mobileOptions = langModal
+            ? langModal.querySelectorAll(".lang-option")
+            : [];
+
+          // 偵測是否為手機版
+          function isMobile() {
+            return window.innerWidth <= 820;
+          }
+
+          // 關閉 Modal
+          function closeModal() {
+            if (langModal) {
+              langModal.classList.remove("active");
+              document.body.style.overflow = "";
+            }
+          }
+
+          // 點擊語言選擇器
           if (selectSelected) {
             selectSelected.addEventListener("click", function (e) {
               e.stopPropagation();
@@ -959,28 +732,48 @@
             });
           }
 
+          // 桌機版選項點擊
           desktopOptions.forEach((option) => {
             option.addEventListener("click", function (e) {
               e.stopPropagation();
               const value = this.getAttribute("data-value");
-              if (window.i18n) window.i18n.changeLanguage(value);
-              if (selectItems) selectItems.classList.add("select-hide");
-              if (selectSelected) selectSelected.classList.remove("select-arrow-active");
+              if (window.i18n) {
+                window.i18n.changeLanguage(value);
+              }
+              if (selectItems) {
+                selectItems.classList.add("select-hide");
+              }
+              if (selectSelected) {
+                selectSelected.classList.remove("select-arrow-active");
+              }
             });
           });
 
+          // 手機版選項點擊
           mobileOptions.forEach((option) => {
             option.addEventListener("click", function (e) {
               e.stopPropagation();
+              const value = this.getAttribute("data-value");
+
+              // if (window.i18n) {
+              //   window.i18n.changeLanguage(value);
+              // }
+
               closeModal();
             });
           });
 
-          const modalClose = langModal ? langModal.querySelector(".lang-modal-close") : null;
-          const modalOverlay = langModal ? langModal.querySelector(".lang-modal-overlay") : null;
-          if (modalClose) modalClose.addEventListener("click", closeModal);
-          if (modalOverlay) modalOverlay.addEventListener("click", closeModal);
+          // Modal 關閉按鈕
+          if (modalClose) {
+            modalClose.addEventListener("click", closeModal);
+          }
 
+          // 點擊遮罩關閉
+          if (modalOverlay) {
+            modalOverlay.addEventListener("click", closeModal);
+          }
+
+          // 點擊外部關閉下拉選單（只針對桌機版）
           document.addEventListener("click", function (e) {
             if (!isMobile() && selectItems && selectSelected) {
               if (!customSelect.contains(e.target)) {
@@ -992,44 +785,57 @@
         }
 
         // ==========================================
-        // 2. 滾動觸發動畫
+        // 2. 滾動觸發動畫（Intersection Observer 通用優化版）
         // ==========================================
         if ("IntersectionObserver" in window) {
+          // 1. 我們只建立「一個」觀察器
           const observer = new IntersectionObserver(
             function (entries, observer) {
               entries.forEach(function (entry) {
                 if (entry.isIntersecting) {
                   entry.target.classList.add("visible");
-                  observer.unobserve(entry.target);
+                  observer.unobserve(entry.target); // 觸發後就停止觀察該元素
                 }
               });
             },
-            { threshold: 0.2 },
+            { threshold: 0.2 }
           );
 
-          const animatedBlocks = document.querySelectorAll(
-            ".company-introduce-block, .core-technologies, .main-pic, .main-introduce, .optical-cutting-service, .functional-material, .cutting-service",
-          );
-
-          animatedBlocks.forEach(function (block) {
+          // 2. 用 querySelectorAll 一次抓出所有需要動畫的區塊
+          // (這裡用逗號分隔，就像 CSS 選擇器一樣，把兩個 class 都選起來)
+          const animatedBlocks = document.querySelectorAll(".company-introduce-block, .core-technologies, .main-pic , .main-introduce,.optical-cutting-service, .functional-material, .cutting-service");
+          
+          // 3. 用 forEach 迴圈，把這些區塊一個個交給剛剛建立的 observer 去監視
+          animatedBlocks.forEach(function(block) {
             observer.observe(block);
+          });
+        } else {
+          // 如果瀏覽器不支援 Intersection Observer，就直接顯示所有區塊（退化處理）
+          const animatedBlocks = document.querySelectorAll(".company-introduce-block, .core-technologies, .main-pic , .main-introduce,.optical-cutting-service, .functional-material, .cutting-service");
+          animatedBlocks.forEach(function(block) {
+            block.classList.add("visible");
           });
         }
 
         // ==========================================
-        // 3. Header 導航選單邏輯 (全設備防護版)
+        // 3. Header 導航選單邏輯
         // ==========================================
         const navLinks = document.getElementById("navLinks");
         const toggleBtn = document.getElementById("toggleBtn");
         const hint = document.getElementById("mobileHint");
         const navItems = document.querySelectorAll(".nav-item");
 
+        // 重置所有子選單
         function resetAllSubMenus() {
-          document.querySelectorAll(".dropdown-menu").forEach(function (menu) {
+          const allDropdowns = document.querySelectorAll(".dropdown-menu");
+          allDropdowns.forEach(function (menu) {
             menu.classList.remove("show");
           });
           navItems.forEach(function (li) {
-            li.classList.remove("dropdown-menu-other-close", "dropdown-menu-open");
+            li.classList.remove(
+              "dropdown-menu-other-close",
+              "dropdown-menu-open"
+            );
           });
         }
 
@@ -1037,131 +843,93 @@
         if (toggleBtn && navLinks) {
           toggleBtn.addEventListener("click", function (e) {
             e.stopPropagation();
-            if (hint && hint.style.display !== "none") {
-              hint.style.display = "none";
-            }
-            this.blur(); // 防觸控卡死
             const isActive = navLinks.classList.toggle("active");
             navLinks.classList.toggle("float-menu");
             toggleBtn.setAttribute("aria-expanded", isActive.toString());
-            if (!isActive) resetAllSubMenus();
+
+            if (!isActive) {
+              resetAllSubMenus();
+            }
           });
         }
 
-        // 語言切換按鈕統一攔截 (手機 + 平板/桌機)
-        document.querySelectorAll('.lang-switch').forEach(function (langBtn) {
-          langBtn.addEventListener('click', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            const lang = this.getAttribute('data-lang');
-            if (window.i18n && typeof window.i18n.changeLanguage === 'function') {
-              window.i18n.changeLanguage(lang);
-            }
-
-            resetAllSubMenus();
-            if (window.innerWidth <= 830) {
-              navLinks.classList.remove("active", "float-menu");
-              if (toggleBtn) toggleBtn.setAttribute("aria-expanded", "false");
-            }
-            this.blur();
-          });
-        });
-
-        // 導航項目事件處理
+        // 每個導航項目的事件
         navItems.forEach(function (item) {
+          // 手機版點擊
           item.addEventListener("click", function (e) {
-            // 一般連結點擊處理 (排除已攔截的語言按鈕)
-            const clickedLink = e.target.closest('a');
-            if (clickedLink && !clickedLink.classList.contains('lang-switch')) {
-              if (window.innerWidth <= 830) {
-                setTimeout(() => {
-                  navLinks.classList.remove("active", "float-menu");
-                  if (toggleBtn) toggleBtn.setAttribute("aria-expanded", "false");
-                  resetAllSubMenus();
-                }, 150);
-              }
-              return;
-            }
+            if (window.innerWidth > 820) return;
 
             const dropdownMenu = item.querySelector(".dropdown-menu");
             if (!dropdownMenu) return;
 
-            // 支援手機與大螢幕觸控設備 (iPad) 的手風琴展開
-            if (window.innerWidth <= 830 || ('ontouchstart' in window) || navigator.maxTouchPoints > 0) {
-              e.preventDefault();
-              e.stopPropagation();
+            e.preventDefault();
+            e.stopPropagation();
 
-              const isOpening = !dropdownMenu.classList.contains("show");
-              navItems.forEach(function (li) {
-                const otherMenu = li.querySelector(".dropdown-menu");
-                if (li !== item) {
-                  if (otherMenu) otherMenu.classList.remove("show");
-                  li.classList.toggle("dropdown-menu-other-close", isOpening);
-                  li.classList.remove("dropdown-menu-open");
-                } else {
-                  li.classList.toggle("dropdown-menu-open", isOpening);
-                  li.classList.remove("dropdown-menu-other-close");
-                }
-              });
-              dropdownMenu.classList.toggle("show");
-            }
+            const isOpening = !dropdownMenu.classList.contains("show");
+
+            navItems.forEach(function (li) {
+              const otherMenu = li.querySelector(".dropdown-menu");
+              if (li !== item) {
+                if (otherMenu) otherMenu.classList.remove("show");
+                li.classList.toggle("dropdown-menu-other-close", isOpening);
+                li.classList.remove("dropdown-menu-open");
+              } else {
+                li.classList.toggle("dropdown-menu-open", isOpening);
+                li.classList.remove("dropdown-menu-other-close");
+              }
+            });
+
+            dropdownMenu.classList.toggle("show");
           });
 
-          // 桌機滑鼠移入開啟
+          // 桌機版 Hover
           item.addEventListener("mouseenter", function () {
-            if (window.innerWidth <= 830) return;
-            if ('ontouchstart' in window || navigator.maxTouchPoints > 0) return;
+            if (window.innerWidth <= 820) return;
             const menu = item.querySelector(".dropdown-menu");
             if (menu) menu.classList.add("show");
           });
 
-          // 桌機滑鼠移出關閉
           item.addEventListener("mouseleave", function () {
-            if (window.innerWidth <= 830) return;
-            if ('ontouchstart' in window || navigator.maxTouchPoints > 0) return;
+            if (window.innerWidth <= 820) return;
             const menu = item.querySelector(".dropdown-menu");
             if (menu) menu.classList.remove("show");
           });
         });
 
-        // 點擊畫面外部關閉選單
+        // 點擊外部關閉導航選單
         document.addEventListener("click", function (e) {
+          // 關閉手機提示
           if (hint && hint.style.display !== "none") {
             hint.style.display = "none";
           }
 
-          // 手機版關閉邏輯
-          if (window.innerWidth <= 830 && navLinks && toggleBtn) {
-            if (navLinks.classList.contains("active") && !navLinks.contains(e.target) && !toggleBtn.contains(e.target)) {
+          // 關閉導航選單
+          if (navLinks && toggleBtn) {
+            if (
+              navLinks.classList.contains("active") &&
+              !navLinks.contains(e.target) &&
+              !toggleBtn.contains(e.target)
+            ) {
               navLinks.classList.remove("active", "float-menu");
               toggleBtn.setAttribute("aria-expanded", "false");
               resetAllSubMenus();
             }
           }
-
-          // 平板/觸控螢幕 點擊外部強制關閉下拉選單
-          if (window.innerWidth > 830) {
-            let isClickInsideNav = false;
-            navItems.forEach(item => {
-              if (item.contains(e.target)) isClickInsideNav = true;
-            });
-            if (!isClickInsideNav) {
-              resetAllSubMenus();
-            }
-          }
         });
 
-        // 視窗縮放自動歸零
+        // RWD 自動關閉
         window.addEventListener("resize", function () {
-          if (window.innerWidth > 830) {
-            if (navLinks) navLinks.classList.remove("active", "float-menu");
-            if (toggleBtn) toggleBtn.setAttribute("aria-expanded", "false");
+          if (window.innerWidth > 820) {
+            if (navLinks) {
+              navLinks.classList.remove("active", "float-menu");
+            }
+            if (toggleBtn) {
+              toggleBtn.setAttribute("aria-expanded", "false");
+            }
             resetAllSubMenus();
           }
         });
-
-      }); 
+      });
     </script>
   </body>
 </html>

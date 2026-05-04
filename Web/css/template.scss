@@ -2,8 +2,8 @@
    1. Variables
    ========================================= */
 
-/* --- Color System --- */
-$color-brand: #c7cedf;
+// --- Color System ---
+$color-brand: #c7cedfd5;
 $color-brand-hover: #579ae0;
 $color-accent-red: #ce1313;
 $color-bg-body: #ffffff;
@@ -14,7 +14,7 @@ $color-text-main: #292929;
 $color-border: #1f1f1f42;
 $color-border-dark: #1f1f1f2d;
 $color-site-footer: #04338a;
-/* --- Font System --*/
+// --- Font System ---
 $font-family-inter:
   "Inter",
   system-ui,
@@ -48,24 +48,24 @@ $font-weight-medium: 500;
 $font-weight-bold: 700;
 $font-weight-extrabold: 800;
 
-/* --- RWD Breakpoints ---*/
+// --- RWD Breakpoints ---
 $breakpoint-mobile: 830px;
 $breakpoint-tablet: 1000px;
 
-/* --- Size Variables ---*/
+// --- Size Variables ---
 $header-height: 60px;
 $header-height-mobile: 50px;
 $nav-item-height: 50px;
 $mobile-menu-width: 350px;
 $mobile-menu-height: 350px;
 
-/* --- NEW: Border Radius ---*/
+// --- NEW: Border Radius ---
 $radius-small: 5px;
 $radius-base: 8px;
 $radius-medium: 10px;
 $radius-large: 15px;
 
-/* --- NEW: Spacing ---*/
+// --- NEW: Spacing ---
 $spacing-xs: 5px;
 $spacing-sm: 10px;
 $spacing-md: 15px;
@@ -73,12 +73,12 @@ $spacing-lg: 20px;
 $spacing-xl: 25px;
 $spacing-2xl: 50px;
 
-/* --- NEW: Shadows ---*/
+// --- NEW: Shadows ---
 $shadow-light: 0 2px 8px rgba(0, 0, 0, 0.1);
 $shadow-medium: 0 4px 12px rgba(0, 0, 0, 0.15);
 $shadow-heavy: 0 8px 20px rgba(0, 0, 0, 0.24);
 
-/* --- NEW: Transitions ---*/
+// --- NEW: Transitions ---
 $transition-fast: 0.2s ease;
 $transition-base: 0.3s ease;
 $transition-slow: 0.6s ease;
@@ -186,6 +186,7 @@ $transition-slow: 0.6s ease;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: $color-text-main;
 }
 
 html,
@@ -198,7 +199,6 @@ body {
   overflow-x: hidden;
   line-height: 1.6;
   @include text-body;
-  color: $color-text-main;
 }
 
 img {
@@ -216,27 +216,6 @@ h6 {
   @include text-heading;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-/* =========================================
-   跳過導航
-   ========================================= */
-.skip-link {
-  position: absolute;
-  top: -100px;          /* 平常藏在畫面外 */
-  left: 0;
-  background: #004289;
-  color: white;
-  padding: 8px 16px;
-  z-index: 9999;
-  transition: top 0.2s ease;
-
-  &:focus {
-    top: 0;             /* Tab 到時才出現 */
-  }
-}
 /* =========================================
    4. Header
    ========================================= */
@@ -245,7 +224,7 @@ header {
   position: sticky;
   top: 0;
   background-color: $color-bg-body;
-  color: $color-text-main;
+  color: white;
   height: $header-height;
   z-index: 1500;
   border-bottom: 1px solid $color-border-dark;
@@ -285,7 +264,7 @@ nav {
   display: none;
   height: 50%;
   text-align: center;
-  color: $color-text-main;
+
   @media (max-width: $breakpoint-mobile) {
     @include flex-center;
     margin-right: 18px;
@@ -310,7 +289,6 @@ nav {
 
 @media (max-width: $breakpoint-mobile) {
   .hintText {
-    color: $color-text-main;
     padding: $spacing-lg;
     width: 60%;
     min-height: 40%;
@@ -368,12 +346,11 @@ nav {
   @media (max-width: $breakpoint-mobile) {
     height: auto;
     width: auto;
-    padding: $spacing-md;
+    padding: $radius-large;
     position: fixed;
     right: 0;
     bottom: 0;
     align-items: flex-start;
-    z-index: 10;
   }
 }
 
@@ -384,10 +361,8 @@ nav {
   border: none;
   cursor: pointer;
 
-  @media(hover: hover){
-    &:hover {
+  &:hover {
     scale: 1.1;
-  }
   }
 
   @media (max-width: $breakpoint-mobile) {
@@ -398,9 +373,6 @@ nav {
     background-color: rgb(168, 178, 233);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
   }
-  &:hover, &:active, &:focus {
-      scale: 1 !important;
-    }
 }
 
 /* =========================================
@@ -408,7 +380,6 @@ nav {
    ========================================= */
 
 .nav-links {
-  color: $color-text-main;
   width: 100%;
   font-size: 15px;
   list-style: none;
@@ -467,11 +438,9 @@ nav {
       transform: scaleX(0);
       transform-origin: center;
       transition: transform $transition-fast;
-      
     }
 
-    @media(hover: hover) {
-      &:hover {
+    &:hover {
       background-color: $color-brand-hover;
       border-left: 1.2px solid gray;
       border-right: 1.2px solid gray;
@@ -479,7 +448,6 @@ nav {
       &::after {
         transform: scaleX(1);
       }
-    }
     }
   }
 
@@ -499,10 +467,8 @@ nav {
       border-bottom: 1px solid $color-border-dark;
     }
 
-    @media(hover: hover){
-      &:hover {
+    &:hover {
       background-color: $color-brand-hover;
-    }
     }
   }
 }
@@ -580,10 +546,11 @@ nav {
   background-color: $color-bg-dropdown;
   box-shadow: $shadow-medium;
   z-index: 1;
-  border: 1px solid $color-border;
 
   &.show {
     display: block;
+    border: solid $color-border;
+    border-width: 0 1px 0 0;
   }
 
   @media (max-width: $breakpoint-mobile) {
@@ -617,10 +584,8 @@ nav {
   border-width: 0 0 1px 0;
   background-color: $color-bg-dropdown;
 
-  @media(hover: hover){
-    &:hover {
+  &:hover {
     background-color: $color-bg-dropdown-hover;
-  }
   }
 
   a {
@@ -667,7 +632,7 @@ nav {
   background: none;
   border: none;
   cursor: pointer;
-  padding: $spacing-md;
+  padding: $radius-large;
   @include flex-center;
 
   @media (max-width: $breakpoint-mobile) {
@@ -683,7 +648,7 @@ nav {
 .language-item .dropdown-menu {
   @media (min-width: $breakpoint-mobile) {
     width: 120px;
-    left: 0%;
+    left: 50%;
     transform: translateX(-50%);
   }
 }
@@ -713,7 +678,7 @@ nav {
 .hero-section {
   position: fixed;
   width: 100%;
-  min-height: 100dvh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -809,7 +774,7 @@ nav {
 .motto-box {
   height: auto;
   font-size: 36px;
-  font-weight: 900;
+  font-weight: 1000;
   padding: 0px $radius-large;
   letter-spacing: 8px;
   display: inline-block;
@@ -958,345 +923,13 @@ main {
   width: 100%;
   z-index: 10;
   position: relative;
-  margin-top: 100dvh;
-
-  .main-block1 {
-    background-color: #ffffff;
-    width: 100%;
-    height: 100dvh;
-    display: flex;
-    overflow:hidden;
-  }
-
-  .main-pic {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-    &.visible {
-      animation: slideInLeftSoft 0.3s ease 0.1s backwards;
-    }
-  }
-
-  .main-introduce {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    &.visible {
-      animation: slideInRightSoft 0.3s ease 0.3s backwards;
-    }
-    @include flex-center();
-    h2 {
-      font-size:xx-large;
-      padding: 0 15px;
-    }
-    h3 {
-      display: flex;
-      padding: 5%;
-      @include flex-center();
-    }
-  }
-
-  .triangle-container {
-    position: relative;
-    width: 25vw;
-    height: 25vw;
-    min-width: 200px;
-    min-height: 200px;
-    max-width: 400px;
-    max-height: 400px;
-
-    .AMCtriangle {
-      width: 100%;
-      height: 100%;
-      background-color: aquamarine;
-      background-image: url(../img/all/AMC_triangle-1.png);
-      background-size: cover;
-      background-position: center;
-    }
-
-    .triangle-text {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-
-      p {
-        text-align: center;
-        font-size: clamp(1.2rem, 2vw, 2rem);
-        font-weight: 700;
-        position: absolute;
-        white-space: nowrap;
-        line-height: 1.2;
-
-        &:nth-child(1) {
-          top: -20%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        &:nth-child(2) {
-          bottom: -20%;
-          left: -20%;
-        }
-        &:nth-child(3) {
-          bottom: -20%;
-          right: -20%;
-        }
-      }
-    }
-  }
+  margin-top: 100vh;
   .shadow {
     width: 100%;
     height: 60vh;
     background-color: #1f1f1f91;
   }
 
-  /*main-block2*/
-  .main-block2 {
-    width: 100%;
-    min-height: 50dvh;
-    display: flex;
-    background-color: white;
-    padding: 50px 20px;
-    gap: 20px;
-    justify-content: center;
-    align-items: stretch;
-
-    @media (max-width: $breakpoint-mobile) {
-      flex-direction: column;
-      min-height: auto;
-      padding: 30px 20px;
-      gap: 20px;
-
-    }
-
-    .block2-same {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      flex: 1;
-      min-height: 300px;
-      padding: 40px 30px;
-      background-size: cover;
-      background-position: center;
-      text-decoration: none;
-      border-radius: $radius-medium;
-      position: relative;
-      overflow: hidden;
-      transition: all $transition-base;
-      @media (max-width: $breakpoint-mobile) {
-        width: 100%;
-        padding: 30px 20px;
-        flex: 0;
-      }
-
-      /*半透明遮罩*/
-      &::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: rgba(0, 0, 0, 0.5);
-        z-index: 1;
-        transition: background $transition-base;
-      }
-
-      &:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-
-        &::before {
-          background: rgba(0, 0, 0, 0.35);
-        }
-
-        h2 {
-          text-decoration: underline;
-        }
-      }
-    }
-
-    /* 背景圖片*/
-    .optical-cutting-service {
-      background-image: url(../img/index/p1-2.png);
-      &.visible {
-        @media (min-width: $breakpoint-mobile) {
-        animation: slideInLeftSoft 0.7s ease 0.1s backwards;
-        }
-      }
-    }
-
-    .functional-material {
-      background-image: url(../img/index/p2-1.png);
-      &.visible {
-        @media (min-width: $breakpoint-mobile) {
-        animation: fadeInDown 0.7s ease 0.3s backwards;
-        }
-      } 
-    }
-
-    .cutting-service {
-      background-image: url(../img/index/p3-3.png);
-      &.visible {
-        @media (min-width: $breakpoint-mobile) {
-        animation: slideInRightSoft 0.7s ease 0.5s backwards;
-        }
-      }
-    }
-
-    /*標題樣式*/
-    h2 {
-      color: #ffffff;
-      font-size: 1.8rem;
-      font-weight: 700;
-      margin-bottom: 20px;
-      position: relative;
-      z-index: 2;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-
-      @media (max-width: $breakpoint-mobile) {
-        font-size: 1.5rem;
-        margin-bottom: 15px;
-      }
-    }
-
-    /*描述文字*/
-    p {
-      color: #ffffff;
-      font-weight: 500;
-      font-size: 1rem;
-      line-height: 1.6;
-      position: relative;
-      z-index: 2;
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-      max-width: 90%;
-
-      @media (max-width: $breakpoint-mobile) {
-        font-size: 0.95rem;
-        max-width: 100%;
-      }
-    }
-  }
-
-  .main-block3 {
-    width: 100%;
-    height: 100dvh;
-    display: flex;
-    padding: $spacing-2xl $spacing-xl;
-    background-color: white;
-
-    
-    .company-introduce-block {
-      padding: 20px;
-      width: 40%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content:space-evenly;
-      background-color: white;
-      box-shadow: 2px 2px 20px 1px rgba(87, 87, 207, 0.4);
-      opacity: 0;
-      transform: translateX(-30px);
-
-      &.visible {
-        animation: slideInLeftSoft 0.6s ease-out forwards;
-      }
-
-      img {
-        width: 100%;
-        /* height: 50%;*/
-        object-fit: cover;
-        aspect-ratio: 1368/768;
-      }
-
-      p {
-        padding: $spacing-md;
-        font-weight: 600;
-        font-size:medium;
-      }
-    }
-
-    .core-technologies {
-      opacity: 0;
-      flex: 1;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      padding-left: $spacing-xl;
-      &.visible {
-        animation: slideInRightSoft 0.6s ease-out forwards;
-
-      }
-    }
-
-    .core-technologies-same {
-      flex: 1;
-      display: flex;
-      align-items: center;
-
-
-      &:nth-child(1) {
-        border-bottom: 1px solid rgba(0, 0, 0, 0.24);
-      }
-      &:nth-child(2) {
-        border-bottom: 1px solid rgba(0, 0, 0, 0.24);
-      }
-    }
-
-    .core-technologies-imgbox {
-      width: 100px;
-      height: 100px;
-      border-radius: 20%;
-      display: flex;
-      overflow: hidden;
-      @include flex-center();
-
-      img {
-        width: 100%;
-        height: auto;
-        background-size: cover;
-        background-position: center;
-      }
-    }
-
-    .optical-functional-materials .core-technologies-imgbox {
-      background-color: #3861cf;
-    }
-
-    .adhesive-application .core-technologies-imgbox {
-      background-color: #fc9535;
-    }
-
-    .precision-cutting .core-technologies-imgbox {
-      background-color: #38c990;
-    }
-
-    .core-technologies-txt {
-      flex: 1;
-      padding: 2%;
-      p {
-        font-weight: 600;
-      }
-      h2 {
-        text-align: end;
-        border-bottom: 1px solid rgba(128, 128, 128, 0.712);
-        padding-bottom: 5px;
-      }
-    }
-    .adhesive-application {
-      flex-direction: row-reverse;
-      justify-content: space-between;
-      h2 {
-        text-align: start;
-      }
-    }
-  }
 }
 
 /* =========================================
@@ -1340,8 +973,8 @@ main {
       &:nth-child(1) {
         position: absolute;
         top: -1%;
-        /*left: 50%;
-        transform: translateX(-50%);*/
+        //left: 50%;
+        //transform: translateX(-50%);
         left: 32%;
         z-index: 2;
       }
@@ -1349,8 +982,8 @@ main {
       &:nth-child(2) {
         position: absolute;
         top: 30%;
-        /*left: 35%;
-        transform: translateX(-50%);*/
+        //left: 35%;
+        //transform: translateX(-50%);
         left: 28%;
         z-index: 1;
       }
@@ -1358,8 +991,8 @@ main {
       &:nth-child(3) {
         position: absolute;
         top: 58%;
-        /*left: 60%;
-        transform: translateX(-50%);*/
+        //left: 60%;
+        //transform: translateX(-50%);
         left: 43%;
         z-index: 1;
       }
@@ -1436,111 +1069,8 @@ main {
     min-height: 80vh;
   }
 
-  main .main-block1 {
-    flex-direction: column;
-    @include flex-center();
-    height: 100dvh;
-  }
 
-  main .main-pic {
-    width: 100%;
-    height: 40%;
-  }
-
-  main .main-introduce {
-    width: 100%;
-    height: auto;
-    justify-content: start;
-    margin-top: 20px;
-
-      h2 {
-        font-size:x-large;
-      }
-      h3 {
-        font-size: medium;
-        padding: 20px;
-      }
-  }
-
-  main .triangle-container {
-    width: 200px;
-    height: 200px;
-    min-width: unset;
-    min-height: unset;
-
-    .triangle-text p {
-      font-size: 1.3rem;
-
-      &:nth-child(1) {
-        top: -25%;
-      }
-      &:nth-child(2) {
-        bottom: -15%;
-        left: -20%;
-      }
-      &:nth-child(3) {
-        bottom: -15%;
-        right: -20%;
-      }
-    }
-  }
-
-  main .main-block3 {
-    flex-direction: column;
-    padding: $spacing-md;
-    height: auto;
-
-    .company-introduce-block {
-      width: 100%;
-      /* height: 70vh;*/
-
-      img {
-        width: 90%; 
-        aspect-ratio: 1368/768;
-      }
-
-      p {
-        font-weight: 900;
-        padding: $spacing-sm;
-      }
-    }
-  } 
-
-  main .core-technologies {
-    flex: 1;
-    margin-top: 20px;
-    padding-left: 0 !important;
-    gap: $spacing-sm;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    p {
-      padding: 2px;
-      font-weight: bold; 
-    }
-
-  .core-technologies-same:nth-child(1),
-  .core-technologies-same:nth-child(2),
-  .core-technologies-same:nth-child(3) {
-    border-bottom: 0px;
-    padding: 20px 0px;
-  }
-  }
-
-  .core-technologies-imgbox {
-    width: 80px;
-    height: 80px;
-  }
-}
-@media (max-width: 400px) {
-  main .main-block3 .core-technologies-txt h2 {
-    font-size: 1em;
-  }
-  main .main-block3 .core-technologies-txt p {
-    font-size: 0.5em;
-  }
-}
-/*Footer 樣式整理*/
+//Footer 樣式整理
 
 .site-footer {
   background-color: $color-site-footer;
@@ -1561,7 +1091,7 @@ main {
   grid-template-columns: repeat(5, 1fr);
   gap: $spacing-xl;
   margin-bottom: $spacing-2xl;
-  align-items: start; /* 關鍵：從上方對齊*/
+  align-items: start; // 關鍵：從上方對齊
 
   @media (max-width: $breakpoint-tablet) {
     grid-template-columns: repeat(3, 1fr);
@@ -1569,7 +1099,7 @@ main {
 
   @media (max-width: $breakpoint-mobile) {
     grid-template-columns: repeat(2, 1fr);
-    gap: $spacing-sm;
+    gap: $spacing-lg;
   }
 }
 
@@ -1582,7 +1112,7 @@ main {
     position: relative;
     padding-bottom: $spacing-xs;
 
-    /*標題裝飾小底線*/
+    //標題裝飾小底線
     &::after {
       content: "";
       position: absolute;
@@ -1616,7 +1146,7 @@ main {
   }
 }
 
-/*語言選擇器樣式 */
+//語言選擇器樣式 
 .lang-selector {
   select {
     width: 100%;
@@ -1634,7 +1164,7 @@ main {
   }
 }
 
-/*底部版權區域*/
+//底部版權區
 .footer-bottom {
   border-top: 1px solid $color-border-dark;
   padding-top: $spacing-lg;
@@ -1646,10 +1176,10 @@ main {
   }
 }
 
-/*自訂選單 (桌機版)*/
+//自訂選單 (桌機版)
 .custom-select {
   position: relative;
-  width: 80%;
+  width: 100%;
   user-select: none;
 
   .select-selected {
@@ -1683,7 +1213,7 @@ main {
     }
   }
 
-  /*桌機版下拉選單*/
+  //桌機版下拉選單
   .select-items {
     position: absolute;
     background-color: white;
@@ -1712,7 +1242,7 @@ main {
     display: none;
   }
 
-  /*手機版隱藏桌機版下拉選單*/
+  //手機版隱藏桌機版下拉選單
   @media (max-width: $breakpoint-mobile) {
     .select-items {
       display: none !important;
@@ -1720,11 +1250,11 @@ main {
   }
 }
 
-/*手機版全螢幕 Modal*/
+//手機版全螢幕 Modal
 .lang-modal {
   width: 100%;
   display: none; 
-  /*預設隱藏 */
+  //預設隱藏 
   position: fixed;
   inset: 0;
   z-index: 9999;
@@ -1733,7 +1263,7 @@ main {
     display: block;
   }
 
-  /*半透明遮罩*/
+  //半透明遮罩
   .lang-modal-overlay {
     position: absolute;
     inset: 0;
@@ -1741,7 +1271,7 @@ main {
     animation: fadeIn 0.3s ease;
   }
 
-  /*Modal 內容*/
+  //Modal 內容
   .lang-modal-content {
     position: absolute;
     bottom: 0;
@@ -1754,7 +1284,7 @@ main {
     animation: slideUp 0.3s ease;
   }
 
-  /* Modal 標題列 */
+  // Modal 標題列
   .lang-modal-header {
     display: flex;
     justify-content: space-between;
@@ -1789,7 +1319,7 @@ main {
     }
   }
 
-  /*選項列表 */
+  //選項列表 
   .lang-modal-body {
     padding: $spacing-sm 0;
 
@@ -1841,145 +1371,19 @@ main {
   }
 }
 
-.footer-map{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  
-  .static-map-link {
-  display: block;
-  position: relative;
-  border-radius: $radius-medium;
-  overflow: hidden; /* 確保放大的圖片不會超出圓角邊界 */
-  box-shadow: $shadow-medium;
-  cursor: pointer;
-
-  img {
-    width: 100%;
-    height: auto;
-    /* 👇 保持 16:9 比例，順便完美防禦 CLS 排版位移！ */
-    aspect-ratio: 16 / 9; 
-    object-fit: cover;
-    transition: transform $transition-slow; /* 圖片用比較慢的動畫，感覺更優雅 */
-  }
-  .map-overlay {
-    position: absolute;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.45); /* 半透明黑底 */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0; /* 預設隱藏 */
-    transition: opacity $transition-base;
-
-    span {
-      color: white;
-      font-weight: bold;
-      font-size: 0.8rem;
-      padding: 12px 24px;
-      border: 2px solid rgba(255, 255, 255, 0.8);
-      border-radius: 50px;
-      backdrop-filter: blur(4px); /* 加一點蘋果 UI 風格的毛玻璃效果 */
-      transform: translateY(10px); /* 預設往下沉一點點 */
-      transition: transform $transition-base;
-    }
-  }
-  &:hover {
-    img {
-      transform: scale(1.05); /* 圖片微微放大，帶出呼吸感 */
-    }
-    .map-overlay {
-      opacity: 1; /* 遮罩浮現 */
-      
-      span {
-        transform: translateY(0); /* 文字從下方輕輕浮上來 */
-      }
-    }
-  }
-}
-}
-
-
-
-.footer-contact-taiwan-detail,
-.footer-contact-dept-detail,
-.footer-contact-DG-detail {
-  color: rgb(255, 255, 255) ;
-  background-color: rgb(255,255,255,0.08);
-  border: 1px solid rgb(255,255,255,0.15);
-  font-size: 0.8rem;
-  padding: $spacing-xs;
-  height: 100%;
-  border-radius: 5px;
-  span{
-    white-space: nowrap;
-  }
-  h4{
-    padding-bottom: $spacing-sm;
-    border: #000;
-    font-size: 1rem;
-  }
-
-  .footer-contact{
-    margin-bottom: $spacing-xs;
-  }
-  @media (max-width: $breakpoint-tablet) {
-    /* 平板版 (1000px以下)：強制這三個統一排在第 3 列 */
-    grid-row: 3;
-  }
-  
-  @media (max-width: $breakpoint-mobile) {
-    /* 🚨 手機版防禦機制：解除所有的座標綁定，讓它們自動排進 2 欄裡*/
-    grid-row: auto !important;
-    grid-column: auto !important;
-    span{
-      white-space: normal;
-    }
-  }
-}
-/* 平板版的個別欄位指定*/
-@media (max-width: $breakpoint-tablet) {
-  .footer-contact-taiwan-detail {grid-column: 1;}
-  .footer-contact-dept-detail   { grid-column: 2; }
-  .footer-contact-DG-detail     { grid-column: 3; }
-}
-
-
-/* Logo 區塊*/
 .footer-logo {
   height: 100%;
   display: flex;
   align-items: end;
-  justify-content: end;
+  justify-content: start;
   margin-top: auto;
-  
-  /* 桌機版：釘在第 2 列、第 5 欄 (右下角)*/
-  grid-column: 5;
-  grid-row: 2;
-  @media (max-width: $breakpoint-tablet) {
-    /* 平板版：釘在第 4 列、第 3 欄 (右下角)，並靠右對齊*/
+  @media (max-width: 1000px) {
     justify-content: end;
-    grid-column: 3;
-    grid-row: 4;
   }
-
-  @media (max-width: $breakpoint-mobile) {
-    /* 🚨 手機版防禦機制：解除座標綁定，避免撐破 2 欄的版面 */
-    margin-top: 0;
-    grid-column: auto;
-    grid-row: auto;
-    justify-content: start;  /* 手機版改回靠左對齊比較好看 */
-    order: 99;
-    img {
-      width: 100px;
-    }
-  }
-
   a {
     display: block;
     transition: transform $transition-base;
+
     &:hover {
       transform: scale(1.05);
     }
@@ -1991,4 +1395,11 @@ main {
     display: block;
   }
 
+  @media (max-width: $breakpoint-mobile) {
+    margin-top: 0;
+
+    img {
+      width: 100px;
+    }
+  }
 }
